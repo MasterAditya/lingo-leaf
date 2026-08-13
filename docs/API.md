@@ -107,3 +107,13 @@ Extensibility
 Implementation notes for implementation
 
 - Primary auth method: secure HTTP-only cookie-based sessions as documented above. Document cookie settings (Secure, SameSite, expiration) during implementation.
+
+## API Principle
+
+APIs expose product-level resources and actions rather than mirroring
+database tables one-to-one.
+
+Examples include courses, units, skills, lessons, lesson attempts,
+progress, authentication, and learner statistics.
+
+Database implementation details remain behind the backend API.

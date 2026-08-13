@@ -1,0 +1,732 @@
+{
+  "course": {
+    "slug": "german-a1-foundations",
+    "title": "German A1 Foundations",
+    "interface_language": "en",
+    "learning_language": "de",
+    "approved": true
+  },
+  "vocabulary": [
+    {
+      "content_id": "vocab-hallo",
+      "german": "Hallo",
+      "english_meaning": "hello",
+      "category": "greetings",
+      "cefr_level": "A1",
+      "example_german": "Hallo, Anna!",
+      "example_english": "Hello, Anna!",
+      "approved": true
+    },
+    {
+      "content_id": "vocab-guten-morgen",
+      "german": "Guten Morgen",
+      "english_meaning": "good morning",
+      "category": "greetings",
+      "cefr_level": "A1",
+      "example_german": "Guten Morgen, Frau Müller.",
+      "example_english": "Good morning, Mrs Müller.",
+      "approved": true
+    },
+    {
+      "content_id": "vocab-auf-wiedersehen",
+      "german": "Auf Wiedersehen",
+      "english_meaning": "goodbye",
+      "category": "farewells",
+      "cefr_level": "A1",
+      "example_german": "Auf Wiedersehen, bis morgen!",
+      "example_english": "Goodbye, see you tomorrow!",
+      "approved": true
+    },
+    {
+      "content_id": "vocab-heissen",
+      "german": "heißen",
+      "english_meaning": "to be called; to be named",
+      "category": "introductions",
+      "cefr_level": "A1",
+      "example_german": "Ich heiße Anna.",
+      "example_english": "My name is Anna.",
+      "approved": true
+    },
+    {
+      "content_id": "vocab-buchstabe",
+      "german": "Buchstabe",
+      "english_meaning": "letter (of the alphabet)",
+      "article": "der",
+      "plural": "Buchstaben",
+      "category": "alphabet_pronunciation",
+      "cefr_level": "A1",
+      "example_german": "Das A ist ein Buchstabe.",
+      "example_english": "A is a letter.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-umlaut",
+      "german": "Umlaut",
+      "english_meaning": "umlaut",
+      "article": "der",
+      "plural": "Umlaute",
+      "category": "alphabet_pronunciation",
+      "cefr_level": "A1",
+      "example_german": "Ä, Ö und Ü sind Umlaute.",
+      "example_english": "Ä, Ö, and Ü are umlauts.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-eszett",
+      "german": "Eszett",
+      "english_meaning": "sharp S (ß)",
+      "article": "das",
+      "plural": "Eszett",
+      "category": "alphabet_pronunciation",
+      "cefr_level": "A1",
+      "example_german": "Straße hat ein ß.",
+      "example_english": "Straße has a ß.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-guten-abend",
+      "german": "Guten Abend",
+      "english_meaning": "good evening",
+      "category": "greetings",
+      "cefr_level": "A1",
+      "example_german": "Guten Abend, Herr Becker.",
+      "example_english": "Good evening, Mr Becker.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-tschuess",
+      "german": "Tschüss",
+      "english_meaning": "bye",
+      "category": "farewells",
+      "cefr_level": "A1",
+      "example_german": "Tschüss, bis bald!",
+      "example_english": "Bye, see you soon!",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-bis-bald",
+      "german": "Bis bald",
+      "english_meaning": "see you soon",
+      "category": "farewells",
+      "cefr_level": "A1",
+      "example_german": "Bis bald, Lina!",
+      "example_english": "See you soon, Lina!",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-danke",
+      "german": "Danke",
+      "english_meaning": "thank you",
+      "category": "courtesy",
+      "cefr_level": "A1",
+      "example_german": "Danke für deine Hilfe.",
+      "example_english": "Thank you for your help.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-bitte",
+      "german": "Bitte",
+      "english_meaning": "please; you're welcome",
+      "category": "courtesy",
+      "cefr_level": "A1",
+      "example_german": "Ein Tee, bitte.",
+      "example_english": "A tea, please.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-ich-bin",
+      "german": "ich bin",
+      "english_meaning": "I am",
+      "category": "introductions",
+      "cefr_level": "A1",
+      "example_german": "Ich bin Mara.",
+      "example_english": "I am Mara.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-kommen-aus",
+      "german": "kommen aus",
+      "english_meaning": "to come from",
+      "category": "personal_information",
+      "cefr_level": "A1",
+      "example_german": "Ich komme aus Kanada.",
+      "example_english": "I come from Canada.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-wohnen",
+      "german": "wohnen",
+      "english_meaning": "to live",
+      "category": "personal_information",
+      "cefr_level": "A1",
+      "example_german": "Ich wohne in Bonn.",
+      "example_english": "I live in Bonn.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-deutsch",
+      "german": "Deutsch",
+      "english_meaning": "German (language)",
+      "category": "languages",
+      "cefr_level": "A1",
+      "example_german": "Ich lerne Deutsch.",
+      "example_english": "I am learning German.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-name",
+      "german": "Name",
+      "english_meaning": "name",
+      "article": "der",
+      "plural": "Namen",
+      "category": "personal_information",
+      "cefr_level": "A1",
+      "example_german": "Mein Name ist Noor.",
+      "example_english": "My name is Noor.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-alter",
+      "german": "Alter",
+      "english_meaning": "age",
+      "article": "das",
+      "plural": null,
+      "category": "personal_information",
+      "cefr_level": "A1",
+      "example_german": "Ich bin 22 Jahre alt.",
+      "example_english": "I am 22 years old.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-jahr",
+      "german": "Jahr",
+      "english_meaning": "year",
+      "article": "das",
+      "plural": "Jahre",
+      "category": "personal_information",
+      "cefr_level": "A1",
+      "example_german": "Ich bin 22 Jahre alt.",
+      "example_english": "I am 22 years old.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-telefonnummer",
+      "german": "Telefonnummer",
+      "english_meaning": "telephone number",
+      "article": "die",
+      "plural": "Telefonnummern",
+      "category": "personal_information",
+      "cefr_level": "A1",
+      "example_german": "Meine Telefonnummer ist neu.",
+      "example_english": "My telephone number is new.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-frage",
+      "german": "Frage",
+      "english_meaning": "question",
+      "article": "die",
+      "plural": "Fragen",
+      "category": "basic_questions",
+      "cefr_level": "A1",
+      "example_german": "Ich habe eine Frage.",
+      "example_english": "I have a question.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-wie",
+      "german": "wie",
+      "english_meaning": "how; what ... like",
+      "category": "question_words",
+      "cefr_level": "A1",
+      "example_german": "Wie geht es dir?",
+      "example_english": "How are you?",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-wer",
+      "german": "wer",
+      "english_meaning": "who",
+      "category": "question_words",
+      "cefr_level": "A1",
+      "example_german": "Wer ist das?",
+      "example_english": "Who is that?",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-wo",
+      "german": "wo",
+      "english_meaning": "where",
+      "category": "question_words",
+      "cefr_level": "A1",
+      "example_german": "Wo wohnst du?",
+      "example_english": "Where do you live?",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-woher",
+      "german": "woher",
+      "english_meaning": "where from",
+      "category": "question_words",
+      "cefr_level": "A1",
+      "example_german": "Woher kommst du?",
+      "example_english": "Where do you come from?",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-gut",
+      "german": "gut",
+      "english_meaning": "well; good",
+      "category": "basic_conversations",
+      "cefr_level": "A1",
+      "example_german": "Mir geht es gut.",
+      "example_english": "I am well.",
+      "review_status": "pending_human_review",
+      "approved": false
+    }
+  ],
+  "grammar_topics": [
+    {
+      "content_id": "grammar-heissen-present",
+      "name": "Present tense of heißen (ich heiße)",
+      "explanation": "Use ich heiße to say your name in a simple introduction.",
+      "cefr_level": "A1",
+      "example_data": {
+        "german": "Ich heiße Anna.",
+        "english": "My name is Anna."
+      },
+      "approved": true
+    },
+    {
+      "content_id": "grammar-german-special-letters",
+      "name": "German special letters: ä, ö, ü, ß",
+      "explanation": "German uses ä, ö, ü, and ß in spelling. Keep these characters when you type German words unless an exercise explicitly accepts another spelling.",
+      "cefr_level": "A1",
+      "example_data": {
+        "examples": ["Straße", "schön", "München"],
+        "focus": "spelling and pronunciation"
+      },
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "grammar-sein-present-introduction",
+      "name": "Present tense of sein for introductions",
+      "explanation": "Use bin with ich and bist with du to say who someone is or how someone feels.",
+      "cefr_level": "A1",
+      "example_data": {
+        "german": "Ich bin Mara. Du bist freundlich.",
+        "english": "I am Mara. You are friendly."
+      },
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "grammar-regular-verbs-ich-du",
+      "name": "Regular present-tense verbs: ich and du",
+      "explanation": "Many German verbs use -e with ich and -st with du in the present tense, for example ich wohne and du wohnst.",
+      "cefr_level": "A1",
+      "example_data": {
+        "german": "Ich komme aus Kanada. Wo wohnst du?",
+        "english": "I come from Canada. Where do you live?"
+      },
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "grammar-age-sein-jahre-alt",
+      "name": "Saying your age with sein and Jahre alt",
+      "explanation": "Say your age with sein plus a number and Jahre alt: Ich bin 22 Jahre alt.",
+      "cefr_level": "A1",
+      "example_data": {
+        "german": "Wie alt bist du? Ich bin 22 Jahre alt.",
+        "english": "How old are you? I am 22 years old."
+      },
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "grammar-w-questions",
+      "name": "Basic W-questions",
+      "explanation": "Start simple information questions with words such as wie, wer, wo, and woher. The verb follows the question word.",
+      "cefr_level": "A1",
+      "example_data": {
+        "german": "Wie heißt du? Woher kommst du?",
+        "english": "What is your name? Where do you come from?"
+      },
+      "review_status": "pending_human_review",
+      "approved": false
+    }
+  ],
+  "units": [
+    {
+      "slug": "foundations",
+      "title": "Foundations",
+      "description": "Essential greetings and introductions.",
+      "sort_order": 1,
+      "approved": true,
+      "skills": [
+        {
+          "slug": "greetings-farewells",
+          "title": "Greetings & Farewells",
+          "description": "Say hello and goodbye in German.",
+          "sort_order": 2,
+          "approved": true,
+          "lessons": [
+            {
+              "content_id": "lesson-foundations-greetings-hello",
+              "title": "Hello in German",
+              "sort_order": 1,
+              "hearts_allowed": 5,
+              "xp_reward": 10,
+              "approved": true,
+              "exercises": [
+                {
+                  "content_id": "exercise-greetings-hello-choice",
+                  "type": "multiple_choice",
+                  "prompt": "Choose the German word for “hello.”",
+                  "payload": {"options": ["Hallo", "Danke", "Bitte"], "correct_answers": ["Hallo"]},
+                  "sort_order": 1,
+                  "difficulty": "easy",
+                  "vocabulary_content_ids": ["vocab-hallo"],
+                  "approved": true
+                },
+                {
+                  "content_id": "exercise-greetings-good-morning-bank",
+                  "type": "word_bank",
+                  "prompt": "Build the German translation: “Good morning.”",
+                  "payload": {"tokens": ["Guten", "Morgen", "Abend"], "correct_answers": ["Guten Morgen"]},
+                  "sort_order": 2,
+                  "difficulty": "easy",
+                  "vocabulary_content_ids": ["vocab-guten-morgen"],
+                  "approved": true
+                },
+                {
+                  "content_id": "exercise-greetings-matching",
+                  "type": "matching",
+                  "prompt": "Match each German greeting to its English meaning.",
+                  "payload": {"pairs": [{"left": "Hallo", "right": "Hello"}, {"left": "Tschüss", "right": "Bye"}, {"left": "Danke", "right": "Thank you"}]},
+                  "sort_order": 3,
+                  "difficulty": "easy",
+                  "vocabulary_content_ids": ["vocab-hallo", "vocab-auf-wiedersehen"],
+                  "approved": true
+                },
+                {
+                  "content_id": "exercise-greetings-good-morning-blank",
+                  "type": "fill_blank",
+                  "prompt": "Complete the greeting: Guten ___.",
+                  "payload": {"sentence": "Guten ___.", "blanks": ["Morgen"], "correct_answers": ["Morgen"], "explanation": "Guten Morgen means good morning."},
+                  "sort_order": 4,
+                  "difficulty": "easy",
+                  "vocabulary_content_ids": ["vocab-guten-morgen"],
+                  "approved": true
+                },
+                {
+                  "content_id": "exercise-greetings-goodbye-type",
+                  "type": "type_answer",
+                  "prompt": "Type the German translation: “Goodbye.”",
+                  "payload": {"correct_answers": ["Auf Wiedersehen"], "accepted_answers": ["auf wiedersehen"], "explanation": "Auf Wiedersehen is a formal goodbye."},
+                  "sort_order": 5,
+                  "difficulty": "easy",
+                  "vocabulary_content_ids": ["vocab-auf-wiedersehen"],
+                  "approved": true
+                }
+              ]
+            },
+            {
+              "content_id": "lesson-foundations-greetings-polite-farewells",
+              "title": "Polite Greetings and Farewells",
+              "sort_order": 2,
+              "hearts_allowed": 5,
+              "xp_reward": 10,
+              "review_status": "pending_human_review",
+              "approved": false,
+              "exercises": [
+                {
+                  "content_id": "exercise-greetings-evening-choice",
+                  "type": "multiple_choice",
+                  "prompt": "Choose the greeting you can use in the evening.",
+                  "payload": {"options": ["Guten Abend", "Guten Morgen", "Gute Nacht"], "correct_answers": ["Guten Abend"], "extensions": {"speaking_prompt": "Say the greeting aloud with a partner."}},
+                  "sort_order": 1,
+                  "difficulty": "easy",
+                  "vocabulary_content_ids": ["vocab-guten-abend"],
+                  "review_status": "pending_human_review",
+                  "approved": false
+                },
+                {
+                  "content_id": "exercise-greetings-farewell-matching",
+                  "type": "matching",
+                  "prompt": "Match each German phrase with its English meaning.",
+                  "payload": {"pairs": [{"left": "Tschüss", "right": "Bye"}, {"left": "Bis bald", "right": "See you soon"}, {"left": "Danke", "right": "Thank you"}], "extensions": {"reading_text": "Mira: Tschüss, Leo! Leo: Bis bald, Mira!"}},
+                  "sort_order": 2,
+                  "difficulty": "easy",
+                  "vocabulary_content_ids": ["vocab-tschuess", "vocab-bis-bald", "vocab-danke"],
+                  "review_status": "pending_human_review",
+                  "approved": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "introducing-yourself",
+          "title": "Introducing Yourself",
+          "description": "Give a simple introduction.",
+          "sort_order": 3,
+          "approved": true,
+          "lessons": [
+            {
+              "content_id": "lesson-foundations-introductions-name",
+              "title": "My Name Is…",
+              "sort_order": 1,
+              "hearts_allowed": 5,
+              "xp_reward": 10,
+              "approved": true,
+              "exercises": [
+                {
+                  "content_id": "exercise-introductions-name-translation",
+                  "type": "translation",
+                  "prompt": "Translate into German: “My name is Anna.”",
+                  "payload": {"correct_answers": ["Ich heiße Anna."], "accepted_answers": ["Ich heiße Anna", "Ich heisse Anna."], "explanation": "Ich heiße means my name is / I am called."},
+                  "sort_order": 1,
+                  "difficulty": "easy",
+                  "vocabulary_content_ids": ["vocab-heissen"],
+                  "grammar_topic_content_ids": ["grammar-heissen-present"],
+                  "approved": true
+                }
+              ]
+            },
+            {
+              "content_id": "lesson-foundations-introductions-basic-profile",
+              "title": "A Short Introduction",
+              "sort_order": 2,
+              "hearts_allowed": 5,
+              "xp_reward": 10,
+              "review_status": "pending_human_review",
+              "approved": false,
+              "exercises": [
+                {
+                  "content_id": "exercise-introductions-ich-bin-blank",
+                  "type": "fill_blank",
+                  "prompt": "Complete the introduction: Ich ___ Mara.",
+                  "payload": {"sentence": "Ich ___ Mara.", "blanks": ["bin"], "correct_answers": ["bin"], "explanation": "Use ich bin to say who you are.", "extensions": {"speaking_prompt": "Replace Mara with your own name."}},
+                  "sort_order": 1,
+                  "difficulty": "easy",
+                  "vocabulary_content_ids": ["vocab-ich-bin"],
+                  "grammar_topic_content_ids": ["grammar-sein-present-introduction"],
+                  "review_status": "pending_human_review",
+                  "approved": false
+                },
+                {
+                  "content_id": "exercise-introductions-short-profile-translation",
+                  "type": "translation",
+                  "prompt": "Translate into German: “I am Noor. I learn German.”",
+                  "payload": {"correct_answers": ["Ich bin Noor. Ich lerne Deutsch."], "accepted_answers": ["Ich bin Noor. Ich lerne Deutsch"], "explanation": "A short introduction can give your name and language.", "extensions": {"writing_prompt": "Write two original sentences about yourself."}},
+                  "sort_order": 2,
+                  "difficulty": "easy",
+                  "vocabulary_content_ids": ["vocab-ich-bin", "vocab-deutsch"],
+                  "grammar_topic_content_ids": ["grammar-sein-present-introduction"],
+                  "review_status": "pending_human_review",
+                  "approved": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "alphabet-pronunciation",
+          "title": "Alphabet & Pronunciation",
+          "description": "Recognize German special letters and spelling patterns.",
+          "sort_order": 1,
+          "review_status": "pending_human_review",
+          "approved": false,
+          "lessons": [
+            {
+              "content_id": "lesson-foundations-alphabet-special-letters",
+              "title": "Special Letters in German",
+              "sort_order": 1,
+              "hearts_allowed": 5,
+              "xp_reward": 10,
+              "review_status": "pending_human_review",
+              "approved": false,
+              "exercises": [
+                {
+                  "content_id": "exercise-alphabet-umlaut-choice",
+                  "type": "multiple_choice",
+                  "prompt": "Which character is an umlaut?",
+                  "payload": {"options": ["Ü", "B", "S"], "correct_answers": ["Ü"], "extensions": {"speaking_prompt": "Say Ä, Ö, and Ü aloud after a future audio model is added."}},
+                  "sort_order": 1,
+                  "difficulty": "easy",
+                  "vocabulary_content_ids": ["vocab-umlaut"],
+                  "grammar_topic_content_ids": ["grammar-german-special-letters"],
+                  "review_status": "pending_human_review",
+                  "approved": false
+                },
+                {
+                  "content_id": "exercise-alphabet-special-letters-matching",
+                  "type": "matching",
+                  "prompt": "Match each German spelling term with its meaning.",
+                  "payload": {"pairs": [{"left": "Buchstabe", "right": "letter"}, {"left": "Umlaut", "right": "umlaut"}, {"left": "Eszett", "right": "sharp S (ß)"}], "extensions": {"reading_text": "München, schön, Straße"}},
+                  "sort_order": 2,
+                  "difficulty": "easy",
+                  "vocabulary_content_ids": ["vocab-buchstabe", "vocab-umlaut", "vocab-eszett"],
+                  "grammar_topic_content_ids": ["grammar-german-special-letters"],
+                  "review_status": "pending_human_review",
+                  "approved": false
+                },
+                {
+                  "content_id": "exercise-alphabet-eszett-type",
+                  "type": "type_answer",
+                  "prompt": "Type the German word shown in this spelling clue: Stra__e.",
+                  "payload": {"correct_answers": ["Straße"], "accepted_answers": ["straße"], "explanation": "The word Straße uses ß.", "extensions": {"writing_prompt": "Copy the word once, keeping ß."}},
+                  "sort_order": 3,
+                  "difficulty": "easy",
+                  "vocabulary_content_ids": ["vocab-eszett"],
+                  "grammar_topic_content_ids": ["grammar-german-special-letters"],
+                  "review_status": "pending_human_review",
+                  "approved": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "personal-information",
+          "title": "Personal Information",
+          "description": "Share where you live, where you come from, and basic details.",
+          "sort_order": 4,
+          "review_status": "pending_human_review",
+          "approved": false,
+          "lessons": [
+            {
+              "content_id": "lesson-foundations-personal-information-details",
+              "title": "Where Are You From?",
+              "sort_order": 1,
+              "hearts_allowed": 5,
+              "xp_reward": 10,
+              "review_status": "pending_human_review",
+              "approved": false,
+              "exercises": [
+                {
+                  "content_id": "exercise-personal-information-word-bank",
+                  "type": "word_bank",
+                  "prompt": "Build the sentence: “I come from Canada.”",
+                  "payload": {"tokens": ["Ich", "komme", "aus", "Kanada", "wohne"], "correct_answers": ["Ich komme aus Kanada."], "extensions": {"speaking_prompt": "Say where you come from using your own country."}},
+                  "sort_order": 1,
+                  "difficulty": "easy",
+                  "vocabulary_content_ids": ["vocab-kommen-aus"],
+                  "grammar_topic_content_ids": ["grammar-regular-verbs-ich-du"],
+                  "review_status": "pending_human_review",
+                  "approved": false
+                },
+                {
+                  "content_id": "exercise-personal-information-wohnen-blank",
+                  "type": "fill_blank",
+                  "prompt": "Complete the sentence: Ich ___ in Bonn.",
+                  "payload": {"sentence": "Ich ___ in Bonn.", "blanks": ["wohne"], "correct_answers": ["wohne"], "explanation": "With ich, wohnen becomes wohne.", "extensions": {"writing_prompt": "Write where you live."}},
+                  "sort_order": 2,
+                  "difficulty": "easy",
+                  "vocabulary_content_ids": ["vocab-wohnen"],
+                  "grammar_topic_content_ids": ["grammar-regular-verbs-ich-du"],
+                  "review_status": "pending_human_review",
+                  "approved": false
+                },
+                {
+                  "content_id": "exercise-personal-information-age-translation",
+                  "type": "translation",
+                  "prompt": "Translate into German: “I am 22 years old.”",
+                  "payload": {"correct_answers": ["Ich bin 22 Jahre alt."], "accepted_answers": ["Ich bin 22 Jahre alt"], "explanation": "Use bin plus a number and Jahre alt for age.", "extensions": {"reading_text": "Mara ist 22 Jahre alt."}},
+                  "sort_order": 3,
+                  "difficulty": "easy",
+                  "vocabulary_content_ids": ["vocab-jahr", "vocab-alter"],
+                  "grammar_topic_content_ids": ["grammar-age-sein-jahre-alt"],
+                  "review_status": "pending_human_review",
+                  "approved": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "basic-questions-how-are-you",
+          "title": "Basic Questions & How Are You?",
+          "description": "Ask simple questions and respond politely.",
+          "sort_order": 5,
+          "review_status": "pending_human_review",
+          "approved": false,
+          "lessons": [
+            {
+              "content_id": "lesson-foundations-basic-questions-conversation",
+              "title": "Simple Questions",
+              "sort_order": 1,
+              "hearts_allowed": 5,
+              "xp_reward": 10,
+              "review_status": "pending_human_review",
+              "approved": false,
+              "exercises": [
+                {
+                  "content_id": "exercise-basic-questions-question-word-choice",
+                  "type": "multiple_choice",
+                  "prompt": "Choose the German question word for “where.”",
+                  "payload": {"options": ["wo", "wer", "wie"], "correct_answers": ["wo"], "extensions": {"listening_script": "Wo wohnst du?", "audio_asset_key": null}},
+                  "sort_order": 1,
+                  "difficulty": "easy",
+                  "vocabulary_content_ids": ["vocab-wo"],
+                  "grammar_topic_content_ids": ["grammar-w-questions"],
+                  "review_status": "pending_human_review",
+                  "approved": false
+                },
+                {
+                  "content_id": "exercise-basic-questions-match",
+                  "type": "matching",
+                  "prompt": "Match each question word to its English meaning.",
+                  "payload": {"pairs": [{"left": "wer", "right": "who"}, {"left": "wo", "right": "where"}, {"left": "woher", "right": "where from"}], "extensions": {"reading_text": "Wer ist das? Wo wohnst du? Woher kommst du?"}},
+                  "sort_order": 2,
+                  "difficulty": "easy",
+                  "vocabulary_content_ids": ["vocab-wer", "vocab-wo", "vocab-woher"],
+                  "grammar_topic_content_ids": ["grammar-w-questions"],
+                  "review_status": "pending_human_review",
+                  "approved": false
+                },
+                {
+                  "content_id": "exercise-basic-questions-how-are-you-type",
+                  "type": "type_answer",
+                  "prompt": "Type the German question: “How are you?” (informal)",
+                  "payload": {"correct_answers": ["Wie geht es dir?"], "accepted_answers": ["Wie geht's dir?", "wie geht es dir?", "wie geht's dir?"], "explanation": "Wie geht es dir? is an informal way to ask how someone is.", "extensions": {"speaking_prompt": "Ask the question, then answer: Mir geht es gut."}},
+                  "sort_order": 3,
+                  "difficulty": "easy",
+                  "vocabulary_content_ids": ["vocab-wie", "vocab-gut"],
+                  "grammar_topic_content_ids": ["grammar-w-questions"],
+                  "review_status": "pending_human_review",
+                  "approved": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "assets": []
+}

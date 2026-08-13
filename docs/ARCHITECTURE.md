@@ -71,3 +71,19 @@ Testing and local development
 Notes
 
 - This document intentionally avoids implementation minutiae (framework-specific wiring) while making the boundaries of responsibility explicit. Refer to API.md for concrete endpoints and data shapes.
+
+## Content Architecture
+
+Course content is persisted in SQLite and exposed to the frontend through
+product-level FastAPI APIs.
+
+The frontend must not hard-code course content.
+
+Seed content is maintained separately from application logic and loaded
+through a deterministic seed process.
+
+The MVP does not require runtime AI-generated content.
+
+The architecture should allow a future AI content-generation service to
+create candidate exercises/content, but generated content must pass
+validation and human review before becoming persistent course content.

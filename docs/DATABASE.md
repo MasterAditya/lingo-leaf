@@ -43,6 +43,7 @@ Core tables (recommended)
 
 4. lessons
 - id INTEGER PRIMARY KEY AUTOINCREMENT
+- content_id TEXT UNIQUE NOT NULL -- stable seed/content identity
 - skill_id INTEGER NOT NULL REFERENCES skills(id)
 - title TEXT NOT NULL
 - sort_order INTEGER
@@ -51,6 +52,7 @@ Core tables (recommended)
 
 5. exercises
 - id INTEGER PRIMARY KEY AUTOINCREMENT
+- content_id TEXT UNIQUE NOT NULL -- stable seed/content identity
 - lesson_id INTEGER NOT NULL REFERENCES lessons(id)
 - type TEXT NOT NULL -- enum: multiple_choice, translation, word_bank, matching, fill_blank, type_answer, listening
 - prompt TEXT NOT NULL
@@ -58,7 +60,37 @@ Core tables (recommended)
 - sort_order INTEGER
 - difficulty TEXT
 
-6. attempts (history of attempts)
+6. vocabulary
+- id INTEGER PRIMARY KEY AUTOINCREMENT
+- content_id TEXT UNIQUE NOT NULL -- stable seed/content identity
+- german TEXT NOT NULL
+- english_meaning TEXT NOT NULL
+- article TEXT NULL
+- plural TEXT NULL
+- category TEXT NULL
+- cefr_level TEXT NOT NULL DEFAULT 'A1'
+- example_german TEXT NULL
+- example_english TEXT NULL
+
+7. grammar_topics
+- id INTEGER PRIMARY KEY AUTOINCREMENT
+- content_id TEXT UNIQUE NOT NULL -- stable seed/content identity
+- name TEXT NOT NULL
+- explanation TEXT NOT NULL
+- cefr_level TEXT NOT NULL DEFAULT 'A1'
+- example_data JSON NULL
+
+8. exercise_vocabulary
+- exercise_id INTEGER NOT NULL REFERENCES exercises(id)
+- vocabulary_id INTEGER NOT NULL REFERENCES vocabulary(id)
+- PRIMARY KEY (exercise_id, vocabulary_id)
+
+9. exercise_grammar_topics
+- exercise_id INTEGER NOT NULL REFERENCES exercises(id)
+- grammar_topic_id INTEGER NOT NULL REFERENCES grammar_topics(id)
+- PRIMARY KEY (exercise_id, grammar_topic_id)
+
+10. attempts (history of attempts)
 - id INTEGER PRIMARY KEY AUTOINCREMENT
 - user_id INTEGER NOT NULL REFERENCES users(id)
 - exercise_id INTEGER NOT NULL REFERENCES exercises(id)
@@ -106,13 +138,15 @@ Notes: A sessions table lets the backend map a secure HTTP-only cookie to a serv
 Indexes and constraints
 
 - Index on attempts(user_id, exercise_id, created_at) for recent activity queries
-- Unique constraints on slugs for units/skills so seeding is idempotent
+- Unique constraints on unit/skill slugs and vocabulary, grammar-topic, lesson, and exercise content IDs so seeding is idempotent
 
 Seeding rules
 
-- Provide a deterministic seeding script that reads structured JSON/YAML data and inserts units, skills, lessons, exercises, and assets.
-- If a slug already exists, update the record rather than duplicating (idempotent seed).
+- Provide a deterministic seeding script that reads structured JSON/YAML data and inserts vocabulary, grammar topics, units, skills, lessons, exercises, and assets.
+- If a slug or stable content ID already exists, update the record rather than duplicating (idempotent seed). Lessons and exercises must use stable `content_id` values rather than parent-local sort order as their seed identity.
 - Seed data should include an "approved" or "reviewed" flag for exercises and content items so that AI-generated candidate content can be staged and then marked approved after human review.
+- Exercises may reference zero or more vocabulary records and grammar topics by stable content ID; the database stores those links through many-to-many association tables while retaining the flexible exercise payload.
+- Production seed files live under `backend/app/content/`. Reference or source materials must remain outside that directory and are never imported by the production seed command.
 
 Validation and typed-answer data
 
