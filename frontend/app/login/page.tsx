@@ -6,8 +6,6 @@ import Link from 'next/link';
 import { login, ApiError } from '@/lib/api';
 import LingoLeafLogo from '@/components/LingoLeafLogo';
 
-'use client';
-
 export default function LoginPage() {
   const router = useRouter();
   const [email, setEmail] = useState('');
