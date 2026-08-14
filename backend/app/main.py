@@ -22,7 +22,11 @@ app = FastAPI(title="German A1 Foundations API", lifespan=lifespan)
 # Configure CORS for frontend-backend communication
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://localhost:3001"],
+    allow_origins=[
+        "http://localhost:3000",
+        "http://localhost:3001",
+        "https://lingo-leaf.vercel.app"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
