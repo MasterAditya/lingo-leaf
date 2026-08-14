@@ -14,6 +14,7 @@ from sqlalchemy.orm import Session
 
 from .auth import SESSION_COOKIE_NAME, SESSION_LIFETIME, create_session, current_user_optional, require_current_user
 from .database import get_session
+from .email import send_password_reset_email
 from .learning import complete_lesson, is_lesson_unlocked, is_skill_unlocked, public_payload, record_attempt
 from .models import Attempt, Exercise, Lesson, LessonProgress, PasswordReset, SessionRecord, Skill, SkillProgress, Unit, User
 from .security import hash_password, verify_password
@@ -42,6 +43,7 @@ class ForgotPasswordRequest(BaseModel):
 class ResetPasswordRequest(BaseModel):
     token: str
     new_password: str
+    confirm_password: str
 
 
 class LoginRequest(BaseModel):
@@ -105,12 +107,24 @@ def _lesson_data(lesson: Lesson, user: User | None = None, db: Session | None = 
 
 
 def _progress_data(db: Session, user: User) -> dict[str, Any]:
+    from .learning import get_current_hearts
+    
     skills = list(
         db.scalars(select(SkillProgress).where(SkillProgress.user_id == user.id).order_by(SkillProgress.skill_id))
     )
     lessons = list(
         db.scalars(select(LessonProgress).where(LessonProgress.user_id == user.id).order_by(LessonProgress.lesson_id))
     )
+    
+    # Get current hearts with regeneration
+    current_hearts, last_heart_update = get_current_hearts(user)
+    
+    # Calculate minutes until next heart
+    from datetime import timedelta
+    minutes_until_next = 30 - int((datetime.now() - last_heart_update).total_seconds() / 60) % 30
+    if minutes_until_next == 30:
+        minutes_until_next = 0
+    
     return {
         "user_id": user.id,
         "xp": user.xp,
@@ -119,13 +133,14 @@ def _progress_data(db: Session, user: User) -> dict[str, Any]:
         "daily_xp": user.daily_xp,
         "daily_goal_target": user.daily_goal_target,
         "last_active": user.last_active,
+        "current_hearts": current_hearts,
+        "minutes_until_next_heart": minutes_until_next if current_hearts < 5 else 0,
         "skills": [{"skill_id": item.skill_id, "xp": item.xp, "mastered": item.mastered} for item in skills],
         "lessons": [
             {
                 "lesson_id": item.lesson_id,
                 "completed": item.completed,
                 "attempts_count": item.attempts_count,
-                "hearts_remaining": item.hearts_remaining,
             }
             for item in lessons
         ],
@@ -231,7 +246,7 @@ def update_current_user(
 
 @router.post("/auth/forgot-password")
 def forgot_password(body: ForgotPasswordRequest, db: Session = Depends(get_session)) -> dict[str, str]:
-    """Initiate password reset by creating a reset token."""
+    """Initiate password reset by creating a reset token and sending email."""
     # Always return success to avoid revealing whether email exists
     user = db.scalar(select(User).where(User.email == body.email.strip().lower()))
     if user is not None:
@@ -240,12 +255,9 @@ def forgot_password(body: ForgotPasswordRequest, db: Session = Depends(get_sessi
         from datetime import timedelta
 
         token = secrets.token_urlsafe(32)
-        expires_at = datetime.now() + timedelta(hours=1)
+        expires_at = datetime.now() + timedelta(minutes=30)
 
         # Invalidate any existing unused tokens for this user
-        db.execute(
-            select(PasswordReset).where(PasswordReset.user_id == user.id, PasswordReset.used == False)
-        )
         existing_resets = list(
             db.scalars(select(PasswordReset).where(PasswordReset.user_id == user.id, PasswordReset.used == False))
         )
@@ -256,11 +268,15 @@ def forgot_password(body: ForgotPasswordRequest, db: Session = Depends(get_sessi
         db.add(reset_record)
         db.commit()
 
-        # In production, send email with reset link containing the token
-        # For now, the token is returned in the response for testing
-        # In production with email provider, remove token from response
-        # and configure SMTP/API for email delivery
-        return {"message": "If an account exists with this email, a password reset link has been sent."}
+        # Send password reset email
+        frontend_base_url = os.environ.get("FRONTEND_BASE_URL", "https://lingo-leaf.vercel.app")
+        reset_url = f"{frontend_base_url}/reset-password?token={token}"
+        
+        email_sent = send_password_reset_email(user.email, reset_url)
+        if not email_sent:
+            # Log error but don't reveal to user (account enumeration protection)
+            import logging
+            logging.error(f"Failed to send password reset email to {user.email}")
 
     return {"message": "If an account exists with this email, a password reset link has been sent."}
 
@@ -273,6 +289,13 @@ def reset_password(body: ResetPasswordRequest, db: Session = Depends(get_session
             status.HTTP_422_UNPROCESSABLE_ENTITY,
             "INVALID_PASSWORD",
             "Password must be at most 72 bytes.",
+        )
+    
+    if body.new_password != body.confirm_password:
+        raise _error(
+            status.HTTP_422_UNPROCESSABLE_ENTITY,
+            "PASSWORDS_DO_NOT_MATCH",
+            "Passwords do not match.",
         )
 
     reset = db.scalar(

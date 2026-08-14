@@ -100,10 +100,10 @@ export async function forgotPassword(email: string) {
   });
 }
 
-export async function resetPassword(token: string, newPassword: string) {
+export async function resetPassword(token: string, newPassword: string, confirmPassword: string) {
   return fetchApi<{ message: string }>('/api/auth/reset-password', {
     method: 'POST',
-    body: JSON.stringify({ token, new_password: newPassword }),
+    body: JSON.stringify({ token, new_password: newPassword, confirm_password: confirmPassword }),
   });
 }
 

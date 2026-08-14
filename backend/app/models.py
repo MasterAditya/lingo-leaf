@@ -53,6 +53,8 @@ class User(Base):
     daily_xp: Mapped[int] = mapped_column(Integer, nullable=False, default=0, server_default="0")
     last_daily_reset: Mapped[date | None] = mapped_column(Date)
     last_active: Mapped[date | None] = mapped_column(Date)
+    current_hearts: Mapped[int] = mapped_column(Integer, nullable=False, default=5, server_default="5")
+    last_heart_update_at: Mapped[datetime] = mapped_column(DateTime, nullable=False, server_default=func.current_timestamp())
     created_at: Mapped[datetime] = mapped_column(DateTime, nullable=False, server_default=func.current_timestamp())
 
     attempts: Mapped[list[Attempt]] = relationship(back_populates="user")

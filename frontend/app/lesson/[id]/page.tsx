@@ -8,8 +8,8 @@ import WordBankExercise from '@/components/exercises/WordBankExercise';
 import MatchingExercise from '@/components/exercises/MatchingExercise';
 import FillBlankExercise from '@/components/exercises/FillBlankExercise';
 import TypeAnswerExercise from '@/components/exercises/TypeAnswerExercise';
-import { getLesson, submitAttempt, completeLesson, ApiError } from '@/lib/api';
-import type { LessonWithExercises, CompletionResult } from '@/types/api';
+import { getLesson, submitAttempt, completeLesson, getProgress, getCurrentUser, ApiError } from '@/lib/api';
+import type { LessonWithExercises, CompletionResult, Progress } from '@/types/api';
 
 export default function LessonPage({ params }: { params: Promise<{ id: string }> }) {
   const router = useRouter();
@@ -19,6 +19,7 @@ export default function LessonPage({ params }: { params: Promise<{ id: string }>
   const [lesson, setLesson] = useState<LessonWithExercises | null>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [hearts, setHearts] = useState<number>(5);
+  const [minutesUntilNextHeart, setMinutesUntilNextHeart] = useState<number>(0);
   const [totalXP, setTotalXP] = useState(0);
   const [loading, setLoading] = useState(true);
   const [submitting, setSubmitting] = useState(false);
@@ -34,7 +35,17 @@ export default function LessonPage({ params }: { params: Promise<{ id: string }>
       try {
         const data = await getLesson(lessonId);
         setLesson(data.lesson);
-        setHearts(data.lesson.hearts_allowed);
+        
+        // Load user's current hearts
+        try {
+          const userData = await getCurrentUser();
+          const progressData = await getProgress(userData.id);
+          setHearts(progressData.current_hearts);
+          setMinutesUntilNextHeart(progressData.minutes_until_next_heart);
+        } catch {
+          // If progress fails, use lesson default
+          setHearts(data.lesson.hearts_allowed);
+        }
       } catch (err) {
         if (err instanceof ApiError) {
           if (err.code === 'UNAUTHORIZED') {
@@ -64,7 +75,8 @@ export default function LessonPage({ params }: { params: Promise<{ id: string }>
 
     try {
       const result = await submitAttempt(currentExercise.id, answer);
-      setHearts(result.user_hearts_remaining);
+      setHearts(result.progress.current_hearts);
+      setMinutesUntilNextHeart(result.progress.minutes_until_next_heart);
       setTotalXP((prev) => prev + result.xp_awarded);
       
       const isCorrect = result.result === 'correct';
@@ -94,7 +106,7 @@ export default function LessonPage({ params }: { params: Promise<{ id: string }>
       // Auto-advance after short delay
       setTimeout(() => {
         setFeedback(null);
-        if (result.user_hearts_remaining === 0) {
+        if (result.progress.current_hearts === 0) {
           router.push('/learn');
         } else if (currentIndex < (lesson?.exercises.length || 0) - 1) {
           setCurrentIndex((prev) => prev + 1);
@@ -104,7 +116,7 @@ export default function LessonPage({ params }: { params: Promise<{ id: string }>
       }, 1500);
     } catch (error) {
       if (error instanceof ApiError) {
-        if (error.code === 'LESSON_OUT_OF_HEARTS') {
+        if (error.code === 'OUT_OF_HEARTS') {
           setError('No hearts remaining. Try again later!');
           setTimeout(() => {
             router.push('/learn');
@@ -348,6 +360,11 @@ export default function LessonPage({ params }: { params: Promise<{ id: string }>
                   <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
                 </svg>
                 <span className="font-bold text-red-700">{hearts}</span>
+                {hearts < 5 && minutesUntilNextHeart > 0 && (
+                  <span className="text-xs text-red-600 ml-1">
+                    +{minutesUntilNextHeart}m
+                  </span>
+                )}
               </div>
               <div className="flex items-center space-x-2 bg-yellow-50 px-3 py-1.5 rounded-full border border-yellow-100">
                 <svg className="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 24 24">

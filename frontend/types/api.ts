@@ -59,6 +59,8 @@ export interface Progress {
   daily_xp: number;
   daily_goal_target: number;
   last_active: string | null;
+  current_hearts: number;
+  minutes_until_next_heart: number;
   skills: Array<{
     skill_id: number;
     xp: number;
@@ -68,7 +70,6 @@ export interface Progress {
     lesson_id: number;
     completed: boolean;
     attempts_count: number;
-    hearts_remaining: number | null;
   }>;
 }
 
@@ -76,7 +77,6 @@ export interface AttemptResult {
   result: 'correct' | 'incorrect';
   xp_awarded: number;
   correct_answers: string[];
-  user_hearts_remaining: number;
   explanation?: string;
   progress: Progress;
 }
@@ -85,7 +85,6 @@ export interface CompletionResult {
   lesson_completed: boolean;
   xp_total: number;
   next_skill_unlocked: boolean;
-  user_hearts_remaining: number | null;
   progress: Progress;
 }
 

@@ -115,6 +115,52 @@ def exercise_xp(lesson: Lesson) -> int:
     return max(1, lesson.xp_reward // count)
 
 
+def get_current_hearts(user: User) -> tuple[int, datetime]:
+    """Calculate current hearts with regeneration based on elapsed time.
+    
+    Returns:
+        Tuple of (current_hearts, last_heart_update_at)
+    """
+    now = utcnow()
+    last_update = user.last_heart_update_at
+    
+    # Calculate elapsed time in minutes
+    elapsed_minutes = int((now - last_update).total_seconds() / 60)
+    
+    # Calculate how many complete 30-minute intervals have passed
+    hearts_to_add = elapsed_minutes // 30
+    
+    if hearts_to_add > 0:
+        # Add regenerated hearts, cap at 5
+        new_hearts = min(5, user.current_hearts + hearts_to_add)
+        
+        # Update last update time to account for partial intervals
+        # If we added 2 hearts (60 minutes), we keep the remaining partial time
+        minutes_used = hearts_to_add * 30
+        user.last_heart_update_at = last_update + timedelta(minutes=minutes_used)
+        user.current_hearts = new_hearts
+        
+        return new_hearts, user.last_heart_update_at
+    
+    return user.current_hearts, last_update
+
+
+def consume_heart(user: User) -> bool:
+    """Consume one heart if available.
+    
+    Returns:
+        True if heart was consumed, False if no hearts available
+    """
+    current_hearts, _ = get_current_hearts(user)
+    
+    if current_hearts <= 0:
+        return False
+    
+    user.current_hearts = max(0, current_hearts - 1)
+    user.last_heart_update_at = utcnow()
+    return True
+
+
 def record_activity_and_xp(user: User, xp_awarded: int) -> None:
     today = date.today()
     if user.last_daily_reset != today:
@@ -136,8 +182,11 @@ def record_attempt(db: Session, user: User, exercise: Exercise, response: Any) -
     progress = get_or_start_lesson_progress(db, user, lesson)
     if progress.completed:
         raise ValueError("LESSON_ALREADY_COMPLETED")
-    if progress.hearts_remaining is not None and progress.hearts_remaining <= 0:
-        raise ValueError("LESSON_OUT_OF_HEARTS")
+    
+    # Check user's current hearts before allowing attempt
+    current_hearts, _ = get_current_hearts(user)
+    if current_hearts <= 0:
+        raise ValueError("OUT_OF_HEARTS")
 
     correct, normalized = validate_response(exercise, response)
     prior_correct = db.scalar(
@@ -161,8 +210,10 @@ def record_attempt(db: Session, user: User, exercise: Exercise, response: Any) -
     )
     progress.attempts_count += 1
     progress.last_attempt = utcnow()
+    
+    # Consume heart on incorrect answer
     if not correct:
-        progress.hearts_remaining = max(0, (progress.hearts_remaining or 0) - 1)
+        consume_heart(user)
     elif xp_awarded:
         skill_progress = db.scalar(
             select(SkillProgress).where(SkillProgress.user_id == user.id, SkillProgress.skill_id == lesson.skill_id)
@@ -197,7 +248,6 @@ def complete_lesson(db: Session, user: User, lesson: Lesson) -> tuple[bool, Less
 
     progress.completed = True
     progress.last_completed_at = utcnow()
-    progress.hearts_remaining = None
     all_lessons = list(db.scalars(select(Lesson).where(Lesson.skill_id == lesson.skill_id)))
     completed_lesson_ids = set(
         db.scalars(
