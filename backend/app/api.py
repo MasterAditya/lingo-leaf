@@ -18,7 +18,8 @@ from .models import Attempt, Exercise, Lesson, LessonProgress, SessionRecord, Sk
 from .security import hash_password, verify_password
 
 router = APIRouter(prefix="/api")
-COOKIE_SECURE = os.environ.get("SESSION_COOKIE_SECURE", "false").lower() == "true"
+# Default to secure cookies for production HTTPS, but allow override for local HTTP development
+COOKIE_SECURE = os.environ.get("SESSION_COOKIE_SECURE", "true").lower() == "true"
 
 
 class RegisterRequest(BaseModel):
