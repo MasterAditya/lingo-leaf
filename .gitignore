@@ -3,3 +3,7 @@ __pycache__/
 .pytest_cache/
 .ruff_cache/
 data/*.db
+.env
+node_modules/
+.next/
+frontend/.env

@@ -108,6 +108,14 @@ Implementation notes for implementation
 
 - Primary auth method: secure HTTP-only cookie-based sessions as documented above. Document cookie settings (Secure, SameSite, expiration) during implementation.
 
+Implemented vertical-slice details
+
+- Implemented routes use the paths above. Registration and login set a server-side, opaque `german_a1_session` cookie with `HttpOnly`, `SameSite=Lax`, and a seven-day lifetime. `Secure` is controlled by `SESSION_COOKIE_SECURE` and must be enabled in HTTPS deployments.
+- Course retrieval reads only the seeded SQLite content. Because the deterministic production seed imports only `approved: true` records, pending review content is not exposed by these routes.
+- `GET /api/lessons/{lesson_id}` removes accepted/correct answers, blank answers, explanations, and matching-pair mappings from its exercise payloads. The attempt endpoint returns canonical feedback after validation.
+- `POST /api/exercises/{exercise_id}/attempt` awards an exercise's share of lesson XP only on that learner's first correct attempt for that exercise. Incorrect attempts deduct one lesson heart. The backend records all attempts and returns canonical learner progress.
+- `POST /api/lessons/{lesson_id}/complete` does not trust the submitted summary for correctness. It completes a lesson only after the backend has persisted a correct attempt for every exercise in that lesson; repeated completion is idempotent.
+
 ## API Principle
 
 APIs expose product-level resources and actions rather than mirroring

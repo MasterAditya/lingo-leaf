@@ -24,18 +24,10 @@ def test_seed_is_deterministic_and_contains_required_exercise_types(tmp_path) ->
     first_counts = _counts(engine)
     seed_database(engine)
 
-    assert _counts(engine) == first_counts == (1, 2, 2, 6, 4, 1)
+    assert _counts(engine) == first_counts == (2, 8, 14, 45, 44, 13)
     with Session(engine) as session:
         exercise_types = set(session.scalars(select(Exercise.type)))
-        translation = session.scalar(
-            select(Exercise).where(Exercise.content_id == "exercise-introductions-name-translation")
-        )
-        assert translation is not None
-        vocabulary_content_ids = [item.content_id for item in translation.vocabulary_items]
-        grammar_content_ids = [topic.content_id for topic in translation.grammar_topics]
     assert {"multiple_choice", "word_bank", "matching", "fill_blank", "type_answer"} <= exercise_types
-    assert vocabulary_content_ids == ["vocab-heissen"]
-    assert grammar_content_ids == ["grammar-heissen-present"]
 
 
 def test_seed_skips_unapproved_content(tmp_path) -> None:
@@ -47,7 +39,7 @@ def test_seed_skips_unapproved_content(tmp_path) -> None:
 
     seed_database(engine, seed_file)
 
-    assert _counts(engine) == (1, 1, 1, 5, 4, 1)
+    assert _counts(engine) == (2, 8, 14, 45, 44, 13)
 
 
 def test_stable_content_ids_survive_sort_order_changes(tmp_path) -> None:

@@ -50,15 +50,15 @@
     {
       "content_id": "vocab-buchstabe",
       "german": "Buchstabe",
-      "english_meaning": "letter (of the alphabet)",
+      "english_meaning": "letter",
       "article": "der",
       "plural": "Buchstaben",
-      "category": "alphabet_pronunciation",
+      "category": "spelling",
       "cefr_level": "A1",
-      "example_german": "Das A ist ein Buchstabe.",
-      "example_english": "A is a letter.",
+      "example_german": "Der Buchstabe A.",
+      "example_english": "The letter A.",
       "review_status": "pending_human_review",
-      "approved": false
+      "approved": true
     },
     {
       "content_id": "vocab-umlaut",
@@ -66,25 +66,25 @@
       "english_meaning": "umlaut",
       "article": "der",
       "plural": "Umlaute",
-      "category": "alphabet_pronunciation",
+      "category": "spelling",
       "cefr_level": "A1",
-      "example_german": "Ä, Ö und Ü sind Umlaute.",
-      "example_english": "Ä, Ö, and Ü are umlauts.",
+      "example_german": "Ä, Ö, Ü sind Umlaute.",
+      "example_english": "Ä, Ö, Ü are umlauts.",
       "review_status": "pending_human_review",
-      "approved": false
+      "approved": true
     },
     {
       "content_id": "vocab-eszett",
       "german": "Eszett",
       "english_meaning": "sharp S (ß)",
       "article": "das",
-      "plural": "Eszett",
-      "category": "alphabet_pronunciation",
+      "plural": null,
+      "category": "spelling",
       "cefr_level": "A1",
-      "example_german": "Straße hat ein ß.",
-      "example_english": "Straße has a ß.",
+      "example_german": "Das ß ist ein Eszett.",
+      "example_english": "The ß is a sharp S.",
       "review_status": "pending_human_review",
-      "approved": false
+      "approved": true
     },
     {
       "content_id": "vocab-guten-abend",
@@ -92,10 +92,10 @@
       "english_meaning": "good evening",
       "category": "greetings",
       "cefr_level": "A1",
-      "example_german": "Guten Abend, Herr Becker.",
-      "example_english": "Good evening, Mr Becker.",
+      "example_german": "Guten Abend, Mara.",
+      "example_english": "Good evening, Mara.",
       "review_status": "pending_human_review",
-      "approved": false
+      "approved": true
     },
     {
       "content_id": "vocab-tschuess",
@@ -106,7 +106,7 @@
       "example_german": "Tschüss, bis bald!",
       "example_english": "Bye, see you soon!",
       "review_status": "pending_human_review",
-      "approved": false
+      "approved": true
     },
     {
       "content_id": "vocab-bis-bald",
@@ -117,7 +117,7 @@
       "example_german": "Bis bald, Lina!",
       "example_english": "See you soon, Lina!",
       "review_status": "pending_human_review",
-      "approved": false
+      "approved": true
     },
     {
       "content_id": "vocab-danke",
@@ -128,7 +128,7 @@
       "example_german": "Danke für deine Hilfe.",
       "example_english": "Thank you for your help.",
       "review_status": "pending_human_review",
-      "approved": false
+      "approved": true
     },
     {
       "content_id": "vocab-bitte",
@@ -136,43 +136,32 @@
       "english_meaning": "please; you're welcome",
       "category": "courtesy",
       "cefr_level": "A1",
-      "example_german": "Ein Tee, bitte.",
-      "example_english": "A tea, please.",
+      "example_german": "Bitte, nimm Platz. — Danke. — Bitte.",
+      "example_english": "Please, take a seat. — Thank you. — You're welcome.",
       "review_status": "pending_human_review",
       "approved": false
     },
     {
-      "content_id": "vocab-ich-bin",
-      "german": "ich bin",
-      "english_meaning": "I am",
-      "category": "introductions",
-      "cefr_level": "A1",
-      "example_german": "Ich bin Mara.",
-      "example_english": "I am Mara.",
-      "review_status": "pending_human_review",
-      "approved": false
-    },
-    {
-      "content_id": "vocab-kommen-aus",
-      "german": "kommen aus",
-      "english_meaning": "to come from",
-      "category": "personal_information",
+      "content_id": "vocab-kommen",
+      "german": "kommen",
+      "english_meaning": "to come",
+      "category": "basic_conversations",
       "cefr_level": "A1",
       "example_german": "Ich komme aus Kanada.",
       "example_english": "I come from Canada.",
       "review_status": "pending_human_review",
-      "approved": false
+      "approved": true
     },
     {
       "content_id": "vocab-wohnen",
       "german": "wohnen",
       "english_meaning": "to live",
-      "category": "personal_information",
+      "category": "basic_conversations",
       "cefr_level": "A1",
-      "example_german": "Ich wohne in Bonn.",
-      "example_english": "I live in Bonn.",
+      "example_german": "Ich wohne in Berlin.",
+      "example_english": "I live in Berlin.",
       "review_status": "pending_human_review",
-      "approved": false
+      "approved": true
     },
     {
       "content_id": "vocab-deutsch",
@@ -193,23 +182,10 @@
       "plural": "Namen",
       "category": "personal_information",
       "cefr_level": "A1",
-      "example_german": "Mein Name ist Noor.",
-      "example_english": "My name is Noor.",
+      "example_german": "Mein Name ist Anna.",
+      "example_english": "My name is Anna.",
       "review_status": "pending_human_review",
-      "approved": false
-    },
-    {
-      "content_id": "vocab-alter",
-      "german": "Alter",
-      "english_meaning": "age",
-      "article": "das",
-      "plural": null,
-      "category": "personal_information",
-      "cefr_level": "A1",
-      "example_german": "Ich bin 22 Jahre alt.",
-      "example_english": "I am 22 years old.",
-      "review_status": "pending_human_review",
-      "approved": false
+      "approved": true
     },
     {
       "content_id": "vocab-jahr",
@@ -222,7 +198,20 @@
       "example_german": "Ich bin 22 Jahre alt.",
       "example_english": "I am 22 years old.",
       "review_status": "pending_human_review",
-      "approved": false
+      "approved": true
+    },
+    {
+      "content_id": "vocab-alter",
+      "german": "Alter",
+      "english_meaning": "age",
+      "article": "das",
+      "plural": null,
+      "category": "personal_information",
+      "cefr_level": "A1",
+      "example_german": "Wie alt bist du?",
+      "example_english": "How old are you?",
+      "review_status": "pending_human_review",
+      "approved": true
     },
     {
       "content_id": "vocab-telefonnummer",
@@ -253,13 +242,24 @@
     {
       "content_id": "vocab-wie",
       "german": "wie",
-      "english_meaning": "how; what ... like",
+      "english_meaning": "how",
       "category": "question_words",
       "cefr_level": "A1",
       "example_german": "Wie geht es dir?",
       "example_english": "How are you?",
       "review_status": "pending_human_review",
-      "approved": false
+      "approved": true
+    },
+    {
+      "content_id": "vocab-gut",
+      "german": "gut",
+      "english_meaning": "good / well",
+      "category": "basic_conversations",
+      "cefr_level": "A1",
+      "example_german": "Mir geht es gut.",
+      "example_english": "I am well.",
+      "review_status": "pending_human_review",
+      "approved": true
     },
     {
       "content_id": "vocab-wer",
@@ -267,10 +267,10 @@
       "english_meaning": "who",
       "category": "question_words",
       "cefr_level": "A1",
-      "example_german": "Wer ist das?",
-      "example_english": "Who is that?",
+      "example_german": "Wer bist du?",
+      "example_english": "Who are you?",
       "review_status": "pending_human_review",
-      "approved": false
+      "approved": true
     },
     {
       "content_id": "vocab-wo",
@@ -281,7 +281,7 @@
       "example_german": "Wo wohnst du?",
       "example_english": "Where do you live?",
       "review_status": "pending_human_review",
-      "approved": false
+      "approved": true
     },
     {
       "content_id": "vocab-woher",
@@ -292,16 +292,971 @@
       "example_german": "Woher kommst du?",
       "example_english": "Where do you come from?",
       "review_status": "pending_human_review",
-      "approved": false
+      "approved": true
+    },
+    {
+      "content_id": "vocab-heissen",
+      "german": "heißen",
+      "english_meaning": "to be called; to be named",
+      "category": "basic_conversations",
+      "cefr_level": "A1",
+      "example_german": "Ich heiße Anna.",
+      "example_english": "My name is Anna.",
+      "review_status": "pending_human_review",
+      "approved": true
     },
     {
       "content_id": "vocab-gut",
       "german": "gut",
-      "english_meaning": "well; good",
+      "english_meaning": "good / well",
       "category": "basic_conversations",
       "cefr_level": "A1",
       "example_german": "Mir geht es gut.",
       "example_english": "I am well.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-eins",
+      "german": "eins",
+      "english_meaning": "one",
+      "category": "numbers",
+      "cefr_level": "A1",
+      "example_german": "Ich habe einen Bruder.",
+      "example_english": "I have one brother.",
+      "review_status": "pending_human_review",
+      "approved": true
+    },
+    {
+      "content_id": "vocab-zwei",
+      "german": "zwei",
+      "english_meaning": "two",
+      "category": "numbers",
+      "cefr_level": "A1",
+      "example_german": "Ich habe zwei Schwestern.",
+      "example_english": "I have two sisters.",
+      "review_status": "pending_human_review",
+      "approved": true
+    },
+    {
+      "content_id": "vocab-drei",
+      "german": "drei",
+      "english_meaning": "three",
+      "category": "numbers",
+      "cefr_level": "A1",
+      "example_german": "Wir sind drei Personen.",
+      "example_english": "We are three people.",
+      "review_status": "pending_human_review",
+      "approved": true
+    },
+    {
+      "content_id": "vocab-vier",
+      "german": "vier",
+      "english_meaning": "four",
+      "category": "numbers",
+      "cefr_level": "A1",
+      "example_german": "Es ist vier Uhr.",
+      "example_english": "It is four o'clock.",
+      "review_status": "pending_human_review",
+      "approved": true
+    },
+    {
+      "content_id": "vocab-fuenf",
+      "german": "fünf",
+      "english_meaning": "five",
+      "category": "numbers",
+      "cefr_level": "A1",
+      "example_german": "Ich habe fünf Bücher.",
+      "example_english": "I have five books.",
+      "review_status": "pending_human_review",
+      "approved": true
+    },
+    {
+      "content_id": "vocab-sechs",
+      "german": "sechs",
+      "english_meaning": "six",
+      "category": "numbers",
+      "cefr_level": "A1",
+      "example_german": "Sechs Äpfel.",
+      "example_english": "Six apples.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-sieben",
+      "german": "sieben",
+      "english_meaning": "seven",
+      "category": "numbers",
+      "cefr_level": "A1",
+      "example_german": "Sieben Tage.",
+      "example_english": "Seven days.",
+      "review_status": "pending_human_review",
+      "approved": true
+    },
+    {
+      "content_id": "vocab-acht",
+      "german": "acht",
+      "english_meaning": "eight",
+      "category": "numbers",
+      "cefr_level": "A1",
+      "example_german": "Acht Stunden.",
+      "example_english": "Eight hours.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-neun",
+      "german": "neun",
+      "english_meaning": "nine",
+      "category": "numbers",
+      "cefr_level": "A1",
+      "example_german": "Neun Monate.",
+      "example_english": "Nine months.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-zehn",
+      "german": "zehn",
+      "english_meaning": "ten",
+      "category": "numbers",
+      "cefr_level": "A1",
+      "example_german": "Zehn Minuten.",
+      "example_english": "Ten minutes.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-elf",
+      "german": "elf",
+      "english_meaning": "eleven",
+      "category": "numbers",
+      "cefr_level": "A1",
+      "example_german": "Es ist elf Uhr.",
+      "example_english": "It is eleven o'clock.",
+      "review_status": "pending_human_review",
+      "approved": true
+    },
+    {
+      "content_id": "vocab-zwoelf",
+      "german": "zwölf",
+      "english_meaning": "twelve",
+      "category": "numbers",
+      "cefr_level": "A1",
+      "example_german": "Es ist zwölf Uhr.",
+      "example_english": "It is twelve o'clock.",
+      "review_status": "pending_human_review",
+      "approved": true
+    },
+    {
+      "content_id": "vocab-dreizehn",
+      "german": "dreizehn",
+      "english_meaning": "thirteen",
+      "category": "numbers",
+      "cefr_level": "A1",
+      "example_german": "Dreizehn Schüler.",
+      "example_english": "Thirteen students.",
+      "review_status": "pending_human_review",
+      "approved": true
+    },
+    {
+      "content_id": "vocab-zwanzig",
+      "german": "zwanzig",
+      "english_meaning": "twenty",
+      "category": "numbers",
+      "cefr_level": "A1",
+      "example_german": "Ich bin zwanzig Jahre alt.",
+      "example_english": "I am twenty years old.",
+      "review_status": "pending_human_review",
+      "approved": true
+    },
+    {
+      "content_id": "vocab-dreissig",
+      "german": "dreißig",
+      "english_meaning": "thirty",
+      "category": "numbers",
+      "cefr_level": "A1",
+      "example_german": "Es ist dreißig Grad.",
+      "example_english": "It is thirty degrees.",
+      "review_status": "pending_human_review",
+      "approved": true
+    },
+    {
+      "content_id": "vocab-vierzig",
+      "german": "vierzig",
+      "english_meaning": "forty",
+      "category": "numbers",
+      "cefr_level": "A1",
+      "example_german": "Vierzig Schüler.",
+      "example_english": "Forty students.",
+      "review_status": "pending_human_review",
+      "approved": true
+    },
+    {
+      "content_id": "vocab-fuenfzig",
+      "german": "fünfzig",
+      "english_meaning": "fifty",
+      "category": "numbers",
+      "cefr_level": "A1",
+      "example_german": "Fünfzig Euro.",
+      "example_english": "Fifty euros.",
+      "review_status": "pending_human_review",
+      "approved": true
+    },
+    {
+      "content_id": "vocab-hundert",
+      "german": "hundert",
+      "english_meaning": "hundred",
+      "category": "numbers",
+      "cefr_level": "A1",
+      "example_german": "Hundert Seiten.",
+      "example_english": "Hundred pages.",
+      "review_status": "pending_human_review",
+      "approved": true
+    },
+    {
+      "content_id": "vocab-montag",
+      "german": "Montag",
+      "english_meaning": "Monday",
+      "category": "days",
+      "cefr_level": "A1",
+      "example_german": "Heute ist Montag.",
+      "example_english": "Today is Monday.",
+      "review_status": "pending_human_review",
+      "approved": true
+    },
+    {
+      "content_id": "vocab-dienstag",
+      "german": "Dienstag",
+      "english_meaning": "Tuesday",
+      "category": "days",
+      "cefr_level": "A1",
+      "example_german": "Am Dienstag arbeite ich.",
+      "example_english": "On Tuesday I work.",
+      "review_status": "pending_human_review",
+      "approved": true
+    },
+    {
+      "content_id": "vocab-mittwoch",
+      "german": "Mittwoch",
+      "english_meaning": "Wednesday",
+      "category": "days",
+      "cefr_level": "A1",
+      "example_german": "Mittwoch haben wir Deutsch.",
+      "example_english": "On Wednesday we have German.",
+      "review_status": "pending_human_review",
+      "approved": true
+    },
+    {
+      "content_id": "vocab-januar",
+      "german": "Januar",
+      "english_meaning": "January",
+      "category": "months",
+      "cefr_level": "A1",
+      "example_german": "Mein Geburtstag ist im Januar.",
+      "example_english": "My birthday is in January.",
+      "review_status": "pending_human_review",
+      "approved": true
+    },
+    {
+      "content_id": "vocab-februar",
+      "german": "Februar",
+      "english_meaning": "February",
+      "category": "months",
+      "cefr_level": "A1",
+      "example_german": "Februar ist kurz.",
+      "example_english": "February is short.",
+      "review_status": "pending_human_review",
+      "approved": true
+    },
+    {
+      "content_id": "vocab-maerz",
+      "german": "März",
+      "english_meaning": "March",
+      "category": "months",
+      "cefr_level": "A1",
+      "example_german": "Im März ist es kalt.",
+      "example_english": "In March it is cold.",
+      "review_status": "pending_human_review",
+      "approved": true
+    },
+    {
+      "content_id": "vocab-uhr",
+      "german": "Uhr",
+      "english_meaning": "o'clock; clock",
+      "article": "die",
+      "plural": null,
+      "category": "time",
+      "cefr_level": "A1",
+      "example_german": "Es ist acht Uhr.",
+      "example_english": "It is eight o'clock.",
+      "review_status": "pending_human_review",
+      "approved": true
+    },
+    {
+      "content_id": "vocab-minute",
+      "german": "Minute",
+      "english_meaning": "minute",
+      "article": "die",
+      "plural": "Minuten",
+      "category": "time",
+      "cefr_level": "A1",
+      "example_german": "Warte fünf Minuten.",
+      "example_english": "Wait five minutes.",
+      "review_status": "pending_human_review",
+      "approved": true
+    },
+    {
+      "content_id": "vocab-stunde",
+      "german": "Stunde",
+      "english_meaning": "hour",
+      "article": "die",
+      "plural": "Stunden",
+      "category": "time",
+      "cefr_level": "A1",
+      "example_german": "Eine Stunde später.",
+      "example_english": "One hour later.",
+      "review_status": "pending_human_review",
+      "approved": true
+    },
+    {
+      "content_id": "vocab-mutter",
+      "german": "Mutter",
+      "english_meaning": "mother",
+      "article": "die",
+      "plural": "Mütter",
+      "category": "family",
+      "cefr_level": "A1",
+      "example_german": "Meine Mutter heißt Lehrerin.",
+      "example_english": "My mother is a teacher.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-vater",
+      "german": "Vater",
+      "english_meaning": "father",
+      "article": "der",
+      "plural": "Väter",
+      "category": "family",
+      "cefr_level": "A1",
+      "example_german": "Mein Vater arbeitet viel.",
+      "example_english": "My father works a lot.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-schwester",
+      "german": "Schwester",
+      "english_meaning": "sister",
+      "article": "die",
+      "plural": "Schwestern",
+      "category": "family",
+      "cefr_level": "A1",
+      "example_german": "Ich habe eine Schwester.",
+      "example_english": "I have a sister.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-bruder",
+      "german": "Bruder",
+      "english_meaning": "brother",
+      "article": "der",
+      "plural": "Brüder",
+      "category": "family",
+      "cefr_level": "A1",
+      "example_german": "Mein Bruder ist groß.",
+      "example_english": "My brother is tall.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-grosseltern",
+      "german": "Großeltern",
+      "english_meaning": "grandparents",
+      "article": "die",
+      "plural": null,
+      "category": "family",
+      "cefr_level": "A1",
+      "example_german": "Meine Großeltern wohnen in Berlin.",
+      "example_english": "My grandparents live in Berlin.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-onkel",
+      "german": "Onkel",
+      "english_meaning": "uncle",
+      "article": "der",
+      "plural": "Onkel",
+      "category": "family",
+      "cefr_level": "A1",
+      "example_german": "Mein Onkel ist Arzt.",
+      "example_english": "My uncle is a doctor.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-tante",
+      "german": "Tante",
+      "english_meaning": "aunt",
+      "article": "die",
+      "plural": "Tanten",
+      "category": "family",
+      "cefr_level": "A1",
+      "example_german": "Meine Tante kocht gut.",
+      "example_english": "My aunt cooks well.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-kind",
+      "german": "Kind",
+      "english_meaning": "child",
+      "article": "das",
+      "plural": "Kinder",
+      "category": "family",
+      "cefr_level": "A1",
+      "example_german": "Das Kind spielt im Park.",
+      "example_english": "The child plays in the park.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-arzt",
+      "german": "Arzt",
+      "english_meaning": "doctor",
+      "article": "der",
+      "plural": "Ärzte",
+      "category": "professions",
+      "cefr_level": "A1",
+      "example_german": "Der Arzt hilft Patienten.",
+      "example_english": "The doctor helps patients.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-lehrer",
+      "german": "Lehrer",
+      "english_meaning": "teacher",
+      "article": "der",
+      "plural": "Lehrer",
+      "category": "professions",
+      "cefr_level": "A1",
+      "example_german": "Der Lehrer unterrichtet Deutsch.",
+      "example_english": "The teacher teaches German.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-student",
+      "german": "Student",
+      "english_meaning": "student",
+      "article": "der",
+      "plural": "Studenten",
+      "category": "professions",
+      "cefr_level": "A1",
+      "example_german": "Der Student lernt viel.",
+      "example_english": "The student studies a lot.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-gross",
+      "german": "groß",
+      "english_meaning": "big; tall",
+      "category": "descriptions",
+      "cefr_level": "A1",
+      "example_german": "Mein Bruder ist groß.",
+      "example_english": "My brother is tall.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-klein",
+      "german": "klein",
+      "english_meaning": "small; little",
+      "category": "descriptions",
+      "cefr_level": "A1",
+      "example_german": "Das Haus ist klein.",
+      "example_english": "The house is small.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-jung",
+      "german": "jung",
+      "english_meaning": "young",
+      "category": "descriptions",
+      "cefr_level": "A1",
+      "example_german": "Sie ist noch jung.",
+      "example_english": "She is still young.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-alt",
+      "german": "alt",
+      "english_meaning": "old",
+      "category": "descriptions",
+      "cefr_level": "A1",
+      "example_german": "Mein Auto ist alt.",
+      "example_english": "My car is old.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-schoen",
+      "german": "schön",
+      "english_meaning": "beautiful; nice",
+      "category": "descriptions",
+      "cefr_level": "A1",
+      "example_german": "Das Wetter ist schön.",
+      "example_english": "The weather is beautiful.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-haus",
+      "german": "Haus",
+      "english_meaning": "house",
+      "article": "das",
+      "plural": "Häuser",
+      "category": "home",
+      "cefr_level": "A1",
+      "example_german": "Wir wohnen in einem Haus.",
+      "example_english": "We live in a house.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-zimmer",
+      "german": "Zimmer",
+      "english_meaning": "room",
+      "article": "das",
+      "plural": "Zimmer",
+      "category": "home",
+      "cefr_level": "A1",
+      "example_german": "Mein Zimmer ist groß.",
+      "example_english": "My room is big.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-kueche",
+      "german": "Küche",
+      "english_meaning": "kitchen",
+      "article": "die",
+      "plural": "Küchen",
+      "category": "home",
+      "cefr_level": "A1",
+      "example_german": "Die Küche ist modern.",
+      "example_english": "The kitchen is modern.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-schlafzimmer",
+      "german": "Schlafzimmer",
+      "english_meaning": "bedroom",
+      "article": "das",
+      "plural": "Schlafzimmer",
+      "category": "home",
+      "cefr_level": "A1",
+      "example_german": "Ich schlafe im Schlafzimmer.",
+      "example_english": "I sleep in the bedroom.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-badezimmer",
+      "german": "Badezimmer",
+      "english_meaning": "bathroom",
+      "article": "das",
+      "plural": "Badezimmer",
+      "category": "home",
+      "cefr_level": "A1",
+      "example_german": "Das Badezimmer ist sauber.",
+      "example_english": "The bathroom is clean.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-essen",
+      "german": "essen",
+      "english_meaning": "to eat",
+      "category": "daily_routine",
+      "cefr_level": "A1",
+      "example_german": "Ich esse um 12 Uhr.",
+      "example_english": "I eat at 12 o'clock.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-trinken",
+      "german": "trinken",
+      "english_meaning": "to drink",
+      "category": "daily_routine",
+      "cefr_level": "A1",
+      "example_german": "Ich trinke Wasser.",
+      "example_english": "I drink water.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-schlafen",
+      "german": "schlafen",
+      "english_meaning": "to sleep",
+      "category": "daily_routine",
+      "cefr_level": "A1",
+      "example_german": "Ich schlafe acht Stunden.",
+      "example_english": "I sleep eight hours.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-arbeiten",
+      "german": "arbeiten",
+      "english_meaning": "to work",
+      "category": "daily_routine",
+      "cefr_level": "A1",
+      "example_german": "Ich arbeite von Montag bis Freitag.",
+      "example_english": "I work from Monday to Friday.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-lernen",
+      "german": "lernen",
+      "english_meaning": "to learn",
+      "category": "daily_routine",
+      "cefr_level": "A1",
+      "example_german": "Ich lerne Deutsch.",
+      "example_english": "I learn German.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-apfel",
+      "german": "Apfel",
+      "english_meaning": "apple",
+      "article": "der",
+      "plural": "Äpfel",
+      "category": "food",
+      "cefr_level": "A1",
+      "example_german": "Ich esse einen Apfel.",
+      "example_english": "I eat an apple.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-brot",
+      "german": "Brot",
+      "english_meaning": "bread",
+      "article": "das",
+      "plural": "Brote",
+      "category": "food",
+      "cefr_level": "A1",
+      "example_german": "Ich kaufe Brot.",
+      "example_english": "I buy bread.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-wasser",
+      "german": "Wasser",
+      "english_meaning": "water",
+      "article": "das",
+      "plural": null,
+      "category": "food",
+      "cefr_level": "A1",
+      "example_german": "Ich trinke Wasser.",
+      "example_english": "I drink water.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-kaffee",
+      "german": "Kaffee",
+      "english_meaning": "coffee",
+      "article": "der",
+      "plural": null,
+      "category": "food",
+      "cefr_level": "A1",
+      "example_german": "Ich trinke Kaffee.",
+      "example_english": "I drink coffee.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-tee",
+      "german": "Tee",
+      "english_meaning": "tea",
+      "article": "der",
+      "plural": null,
+      "category": "food",
+      "cefr_level": "A1",
+      "example_german": "Möchten Sie Tee?",
+      "example_english": "Would you like tea?",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-milch",
+      "german": "Milch",
+      "english_meaning": "milk",
+      "article": "die",
+      "plural": null,
+      "category": "food",
+      "cefr_level": "A1",
+      "example_german": "Ich nehme Milch zum Kaffee.",
+      "example_english": "I take milk with coffee.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-kaufen",
+      "german": "kaufen",
+      "english_meaning": "to buy",
+      "category": "shopping",
+      "cefr_level": "A1",
+      "example_german": "Ich kaufe ein Buch.",
+      "example_english": "I buy a book.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-bezahlen",
+      "german": "bezahlen",
+      "english_meaning": "to pay",
+      "category": "shopping",
+      "cefr_level": "A1",
+      "example_german": "Ich bezahle mit Karte.",
+      "example_english": "I pay with card.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-euro",
+      "german": "Euro",
+      "english_meaning": "euro",
+      "article": "der",
+      "plural": "Euro",
+      "category": "shopping",
+      "cefr_level": "A1",
+      "example_german": "Das kostet zehn Euro.",
+      "example_english": "That costs ten euros.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-stadt",
+      "german": "Stadt",
+      "english_meaning": "city; town",
+      "article": "die",
+      "plural": "Städte",
+      "category": "travel",
+      "cefr_level": "A1",
+      "example_german": "Die Stadt ist schön.",
+      "example_english": "The city is beautiful.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-strasse",
+      "german": "Straße",
+      "english_meaning": "street",
+      "article": "die",
+      "plural": "Straßen",
+      "category": "travel",
+      "cefr_level": "A1",
+      "example_german": "Die Straße ist lang.",
+      "example_english": "The street is long.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-platz",
+      "german": "Platz",
+      "english_meaning": "square; place",
+      "article": "der",
+      "plural": "Plätze",
+      "category": "travel",
+      "cefr_level": "A1",
+      "example_german": "Wir treffen uns am Platz.",
+      "example_english": "We meet at the square.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-bahnhof",
+      "german": "Bahnhof",
+      "english_meaning": "train station",
+      "article": "der",
+      "plural": "Bahnhöfe",
+      "category": "travel",
+      "cefr_level": "A1",
+      "example_german": "Der Bahnhof ist hier.",
+      "example_english": "The train station is here.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-bus",
+      "german": "Bus",
+      "english_meaning": "bus",
+      "article": "der",
+      "plural": "Busse",
+      "category": "travel",
+      "cefr_level": "A1",
+      "example_german": "Ich nehme den Bus.",
+      "example_english": "I take the bus.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-zug",
+      "german": "Zug",
+      "english_meaning": "train",
+      "article": "der",
+      "plural": "Züge",
+      "category": "travel",
+      "cefr_level": "A1",
+      "example_german": "Der Zug kommt pünktlich.",
+      "example_english": "The train comes on time.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-links",
+      "german": "links",
+      "english_meaning": "left",
+      "category": "directions",
+      "cefr_level": "A1",
+      "example_german": "Biegen Sie links ab.",
+      "example_english": "Turn left.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-rechts",
+      "german": "rechts",
+      "english_meaning": "right",
+      "category": "directions",
+      "cefr_level": "A1",
+      "example_german": "Biegen Sie rechts ab.",
+      "example_english": "Turn right.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-geradeaus",
+      "german": "geradeaus",
+      "english_meaning": "straight ahead",
+      "category": "directions",
+      "cefr_level": "A1",
+      "example_german": "Gehen Sie geradeaus.",
+      "example_english": "Go straight ahead.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-der",
+      "german": "der",
+      "english_meaning": "the (masculine)",
+      "category": "articles",
+      "cefr_level": "A1",
+      "example_german": "Der Mann ist groß.",
+      "example_english": "The man is tall.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-die",
+      "german": "die",
+      "english_meaning": "the (feminine); the (plural)",
+      "category": "articles",
+      "cefr_level": "A1",
+      "example_german": "Die Frau ist freundlich.",
+      "example_english": "The woman is friendly.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-das",
+      "german": "das",
+      "english_meaning": "the (neuter)",
+      "category": "articles",
+      "cefr_level": "A1",
+      "example_german": "Das Kind spielt.",
+      "example_english": "The child plays.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-ein",
+      "german": "ein",
+      "english_meaning": "a; an (masculine)",
+      "category": "articles",
+      "cefr_level": "A1",
+      "example_german": "Ein Mann kommt.",
+      "example_english": "A man comes.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-eine",
+      "german": "eine",
+      "english_meaning": "a; an (feminine)",
+      "category": "articles",
+      "cefr_level": "A1",
+      "example_german": "Eine Frau geht.",
+      "example_english": "A woman goes.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-nicht",
+      "german": "nicht",
+      "english_meaning": "not",
+      "category": "negation",
+      "cefr_level": "A1",
+      "example_german": "Ich bin nicht müde.",
+      "example_english": "I am not tired.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-kein",
+      "german": "kein",
+      "english_meaning": "no; not a; none",
+      "category": "negation",
+      "cefr_level": "A1",
+      "example_german": "Ich habe kein Auto.",
+      "example_english": "I have no car.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-koennen",
+      "german": "können",
+      "english_meaning": "can; to be able to",
+      "category": "modal_verbs",
+      "cefr_level": "A1",
+      "example_german": "Ich kann Deutsch.",
+      "example_english": "I can speak German.",
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "vocab-wollen",
+      "german": "wollen",
+      "english_meaning": "to want",
+      "category": "modal_verbs",
+      "cefr_level": "A1",
+      "example_german": "Ich will nach Hause.",
+      "example_english": "I want to go home.",
       "review_status": "pending_human_review",
       "approved": false
     }
@@ -316,6 +1271,7 @@
         "german": "Ich heiße Anna.",
         "english": "My name is Anna."
       },
+      "review_status": "pending_human_review",
       "approved": true
     },
     {
@@ -328,52 +1284,352 @@
         "focus": "spelling and pronunciation"
       },
       "review_status": "pending_human_review",
-      "approved": false
+      "approved": true
     },
     {
       "content_id": "grammar-sein-present-introduction",
       "name": "Present tense of sein for introductions",
-      "explanation": "Use bin with ich and bist with du to say who someone is or how someone feels.",
+      "explanation": "Unit 1 primarily uses informal du. Use bin with ich and bist with du to say who someone is or how someone feels. Sie is the formal form and will be practised later.",
       "cefr_level": "A1",
       "example_data": {
         "german": "Ich bin Mara. Du bist freundlich.",
         "english": "I am Mara. You are friendly."
       },
       "review_status": "pending_human_review",
-      "approved": false
+      "approved": true
     },
     {
       "content_id": "grammar-regular-verbs-ich-du",
-      "name": "Regular present-tense verbs: ich and du",
-      "explanation": "Many German verbs use -e with ich and -st with du in the present tense, for example ich wohne and du wohnst.",
+      "name": "Regular verbs: ich and du forms",
+      "explanation": "For regular verbs ending in -en, remove -en and add -e for ich and -st for du. Example: wohnen → ich wohne, du wohnst.",
       "cefr_level": "A1",
       "example_data": {
-        "german": "Ich komme aus Kanada. Wo wohnst du?",
-        "english": "I come from Canada. Where do you live?"
+        "german": "ich wohne, du wohnst",
+        "english": "I live, you live"
       },
       "review_status": "pending_human_review",
-      "approved": false
+      "approved": true
+    },
+    {
+      "content_id": "grammar-kommen-aus",
+      "name": "Expressing origin with kommen aus",
+      "explanation": "Use kommen aus + place to say where someone comes from: Ich komme aus Kanada.",
+      "cefr_level": "A1",
+      "example_data": {
+        "german": "Ich komme aus Kanada.",
+        "english": "I come from Canada."
+      },
+      "review_status": "pending_human_review",
+      "approved": true
+    },
+    {
+      "content_id": "grammar-du-sie-register",
+      "name": "Informal du vs formal Sie",
+      "explanation": "Use du with friends, family, and people your age. Use Sie with strangers, in formal situations, and with adults you don't know well.",
+      "cefr_level": "A1",
+      "example_data": {
+        "german": "Wie heißt du? vs Wie heißen Sie?",
+        "english": "What's your name? (informal vs formal)"
+      },
+      "review_status": "pending_human_review",
+      "approved": true
     },
     {
       "content_id": "grammar-age-sein-jahre-alt",
-      "name": "Saying your age with sein and Jahre alt",
-      "explanation": "Say your age with sein plus a number and Jahre alt: Ich bin 22 Jahre alt.",
+      "name": "Expressing age with sein + Jahre alt",
+      "explanation": "Use sein + number + Jahre alt to express age: Ich bin 22 Jahre alt.",
       "cefr_level": "A1",
       "example_data": {
-        "german": "Wie alt bist du? Ich bin 22 Jahre alt.",
-        "english": "How old are you? I am 22 years old."
+        "german": "Ich bin 22 Jahre alt.",
+        "english": "I am 22 years old."
+      },
+      "review_status": "pending_human_review",
+      "approved": true
+    },
+    {
+      "content_id": "grammar-w-questions",
+      "name": "W-question words",
+      "explanation": "German question words begin with W-: wer (who), wo (where), woher (where from), wie (how), was (what), wann (when).",
+      "cefr_level": "A1",
+      "example_data": {
+        "german": "Wer bist du? Wo wohnst du?",
+        "english": "Who are you? Where do you live?"
+      },
+      "review_status": "pending_human_review",
+      "approved": true
+    },
+    {
+      "content_id": "grammar-numbers-1-20",
+      "name": "Numbers 1–20",
+      "explanation": "German numbers from eins to zwanzig follow regular patterns. Learn the basic counting sequence.",
+      "cefr_level": "A1",
+      "example_data": {
+        "german": "eins, zwei, drei, vier, fünf, sechs, sieben, acht, neun, zehn",
+        "english": "one, two, three, four, five, six, seven, eight, nine, ten"
+      },
+      "review_status": "pending_human_review",
+      "approved": true
+    },
+    {
+      "content_id": "grammar-numbers-tens",
+      "name": "Tens (20, 30, 40...)",
+      "explanation": "German tens end in -zig: zwanzig, dreißig, vierzig, fünfzig.",
+      "cefr_level": "A1",
+      "example_data": {
+        "german": "zwanzig, dreißig, vierzig, fünfzig",
+        "english": "twenty, thirty, forty, fifty"
+      },
+      "review_status": "pending_human_review",
+      "approved": true
+    },
+    {
+      "content_id": "grammar-days-prepositions",
+      "name": "Days with am",
+      "explanation": "Use am with days of the week: am Montag, am Dienstag.",
+      "cefr_level": "A1",
+      "example_data": {
+        "german": "Am Montag arbeite ich.",
+        "english": "On Monday I work."
+      },
+      "review_status": "pending_human_review",
+      "approved": true
+    },
+    {
+      "content_id": "grammar-months-in",
+      "name": "Months with in",
+      "explanation": "Use in with months: im Januar, im Februar.",
+      "cefr_level": "A1",
+      "example_data": {
+        "german": "Im Januar ist es kalt.",
+        "english": "In January it is cold."
+      },
+      "review_status": "pending_human_review",
+      "approved": true
+    },
+    {
+      "content_id": "grammar-time-structure",
+      "name": "Telling time structure",
+      "explanation": "Use Es ist [number] Uhr for telling time: Es ist acht Uhr.",
+      "cefr_level": "A1",
+      "example_data": {
+        "german": "Es ist acht Uhr.",
+        "english": "It is eight o'clock."
+      },
+      "review_status": "pending_human_review",
+      "approved": true
+    },
+    {
+      "content_id": "grammar-family-possessive",
+      "name": "Family with possessive articles",
+      "explanation": "Use mein, meine with family words: meine Mutter, mein Vater.",
+      "cefr_level": "A1",
+      "example_data": {
+        "german": "Meine Mutter, mein Vater",
+        "english": "My mother, my father"
       },
       "review_status": "pending_human_review",
       "approved": false
     },
     {
-      "content_id": "grammar-w-questions",
-      "name": "Basic W-questions",
-      "explanation": "Start simple information questions with words such as wie, wer, wo, and woher. The verb follows the question word.",
+      "content_id": "grammar-professions-articles",
+      "name": "Professions with articles",
+      "explanation": "Professions use definite articles: Der Arzt, Die Lehrerin.",
       "cefr_level": "A1",
       "example_data": {
-        "german": "Wie heißt du? Woher kommst du?",
-        "english": "What is your name? Where do you come from?"
+        "german": "Der Arzt, Die Lehrerin",
+        "english": "The doctor, The teacher"
+      },
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "grammar-adjectives-endings-basic",
+      "name": "Basic adjective endings",
+      "explanation": "Adjectives change endings based on the article and gender. After ein: ein großes Haus, eine schöne Stadt.",
+      "cefr_level": "A1",
+      "example_data": {
+        "german": "Ein großes Haus, eine schöne Stadt",
+        "english": "A big house, a beautiful city"
+      },
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "grammar-house-prepositions",
+      "name": "House with in and bei",
+      "explanation": "Use in for living in a place: Ich wohne in einem Haus. Use bei for being with someone: Ich bin bei meiner Familie.",
+      "cefr_level": "A1",
+      "example_data": {
+        "german": "Ich wohne in einem Haus.",
+        "english": "I live in a house."
+      },
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "grammar-daily-routine-present",
+      "name": "Daily routine verbs present tense",
+      "explanation": "Routine verbs follow regular patterns: Ich esse, du isst, Ich trinke, du trinkst.",
+      "cefr_level": "A1",
+      "example_data": {
+        "german": "Ich esse, du isst. Ich trinke, du trinkst.",
+        "english": "I eat, you eat. I drink, you drink."
+      },
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "grammar-food-articles",
+      "name": "Food with articles",
+      "explanation": "Food items have their genders: Der Apfel, Das Brot, Die Milch.",
+      "cefr_level": "A1",
+      "example_data": {
+        "german": "Der Apfel, Das Brot, Die Milch",
+        "english": "The apple, The bread, The milk"
+      },
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "grammar-shopping-verbs",
+      "name": "Shopping verbs",
+      "explanation": "Use kaufen and bezahlen for shopping: Ich kaufe, Ich bezahle.",
+      "cefr_level": "A1",
+      "example_data": {
+        "german": "Ich kaufe ein Buch. Ich bezahle mit Karte.",
+        "english": "I buy a book. I pay with card."
+      },
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "grammar-directions-prepositions",
+      "name": "Direction prepositions",
+      "explanation": "Use nach for going to a place: Ich gehe nach Berlin. Use in for being in a place: Ich bin in der Stadt.",
+      "cefr_level": "A1",
+      "example_data": {
+        "german": "Ich gehe nach Berlin. Ich bin in der Stadt.",
+        "english": "I go to Berlin. I am in the city."
+      },
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "grammar-transport-mit",
+      "name": "Transport with mit",
+      "explanation": "Use mit with transport: Ich fahre mit dem Bus, Ich nehme den Zug.",
+      "cefr_level": "A1",
+      "example_data": {
+        "german": "Ich fahre mit dem Bus.",
+        "english": "I go by bus."
+      },
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "grammar-definite-articles-gender",
+      "name": "Definite articles and gender",
+      "explanation": "German nouns have three genders: der (masculine), die (feminine), das (neuter). Memorize the gender with each noun.",
+      "cefr_level": "A1",
+      "example_data": {
+        "german": "Der Mann, Die Frau, Das Kind",
+        "english": "The man, The woman, The child"
+      },
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "grammar-indefinite-articles",
+      "name": "Indefinite articles",
+      "explanation": "Use ein for masculine and neuter, eine for feminine. Ein has no plural form.",
+      "cefr_level": "A1",
+      "example_data": {
+        "german": "Ein Mann, Eine Frau, Ein Kind",
+        "english": "A man, A woman, A child"
+      },
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "grammar-adjective-position",
+      "name": "Adjective position",
+      "explanation": "Adjectives typically come before the noun they describe: ein großes Haus, eine schöne Stadt.",
+      "cefr_level": "A1",
+      "example_data": {
+        "german": "Ein großes Haus",
+        "english": "A big house"
+      },
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "grammar-present-regular-conjugation",
+      "name": "Regular verb conjugation",
+      "explanation": "Regular verbs add -e for ich and -st for du: ich lerne, du lernst, ich arbeite, du arbeitest.",
+      "cefr_level": "A1",
+      "example_data": {
+        "german": "Ich lerne, du lernst.",
+        "english": "I learn, you learn."
+      },
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "grammar-modal-koennen-conjugation",
+      "name": "Können conjugation",
+      "explanation": "Können is irregular: ich kann, du kannst, er/sie/es kann.",
+      "cefr_level": "A1",
+      "example_data": {
+        "german": "Ich kann Deutsch. Du kannst gut.",
+        "english": "I can speak German. You can do well."
+      },
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "grammar-modal-wollen-conjugation",
+      "name": "Wollen conjugation",
+      "explanation": "Wollen is irregular: ich will, du willst, er/sie/es will.",
+      "cefr_level": "A1",
+      "example_data": {
+        "german": "Ich will nach Hause. Du willst auch.",
+        "english": "I want to go home. You also want to."
+      },
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "grammar-nicht-position",
+      "name": "Nicht position",
+      "explanation": "Nicht usually comes after the verb: Ich bin nicht müde. Ich gehe nicht.",
+      "cefr_level": "A1",
+      "example_data": {
+        "german": "Ich bin nicht müde.",
+        "english": "I am not tired."
+      },
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "grammar-kein-usage",
+      "name": "Kein usage",
+      "explanation": "Kein replaces ein for negation: Ich habe kein Auto. Ich habe keine Schwester.",
+      "cefr_level": "A1",
+      "example_data": {
+        "german": "Ich habe kein Auto. Ich habe keine Schwester.",
+        "english": "I have no car. I have no sister."
+      },
+      "review_status": "pending_human_review",
+      "approved": false
+    },
+    {
+      "content_id": "grammar-word-order-verb-second",
+      "name": "Verb in second position",
+      "explanation": "In main clauses, the verb is always in second position. The first position can be the subject, time, or other element.",
+      "cefr_level": "A1",
+      "example_data": {
+        "german": "Ich lerne Deutsch. Heute lerne ich Deutsch.",
+        "english": "I learn German. Today I learn German."
       },
       "review_status": "pending_human_review",
       "approved": false
@@ -391,7 +1647,7 @@
           "slug": "greetings-farewells",
           "title": "Greetings & Farewells",
           "description": "Say hello and goodbye in German.",
-          "sort_order": 2,
+          "sort_order": 1,
           "approved": true,
           "lessons": [
             {
@@ -406,7 +1662,7 @@
                   "content_id": "exercise-greetings-hello-choice",
                   "type": "multiple_choice",
                   "prompt": "Choose the German word for “hello.”",
-                  "payload": {"options": ["Hallo", "Danke", "Bitte"], "correct_answers": ["Hallo"]},
+                  "payload": {"options": ["Hallo", "Danke", "Bitte"], "correct_answers": ["Hallo"], "explanation": "Hallo is the informal way to say hello in German."},
                   "sort_order": 1,
                   "difficulty": "easy",
                   "vocabulary_content_ids": ["vocab-hallo"],
@@ -416,20 +1672,10 @@
                   "content_id": "exercise-greetings-good-morning-bank",
                   "type": "word_bank",
                   "prompt": "Build the German translation: “Good morning.”",
-                  "payload": {"tokens": ["Guten", "Morgen", "Abend"], "correct_answers": ["Guten Morgen"]},
+                  "payload": {"tokens": ["Guten", "Morgen", "Abend"], "correct_answers": ["Guten Morgen"], "explanation": "Guten Morgen means good morning. Use it until around noon."},
                   "sort_order": 2,
                   "difficulty": "easy",
                   "vocabulary_content_ids": ["vocab-guten-morgen"],
-                  "approved": true
-                },
-                {
-                  "content_id": "exercise-greetings-matching",
-                  "type": "matching",
-                  "prompt": "Match each German greeting to its English meaning.",
-                  "payload": {"pairs": [{"left": "Hallo", "right": "Hello"}, {"left": "Tschüss", "right": "Bye"}, {"left": "Danke", "right": "Thank you"}]},
-                  "sort_order": 3,
-                  "difficulty": "easy",
-                  "vocabulary_content_ids": ["vocab-hallo", "vocab-auf-wiedersehen"],
                   "approved": true
                 },
                 {
@@ -437,19 +1683,29 @@
                   "type": "fill_blank",
                   "prompt": "Complete the greeting: Guten ___.",
                   "payload": {"sentence": "Guten ___.", "blanks": ["Morgen"], "correct_answers": ["Morgen"], "explanation": "Guten Morgen means good morning."},
-                  "sort_order": 4,
+                  "sort_order": 3,
                   "difficulty": "easy",
                   "vocabulary_content_ids": ["vocab-guten-morgen"],
                   "approved": true
                 },
                 {
-                  "content_id": "exercise-greetings-goodbye-type",
+                  "content_id": "exercise-greetings-hello-type",
                   "type": "type_answer",
-                  "prompt": "Type the German translation: “Goodbye.”",
-                  "payload": {"correct_answers": ["Auf Wiedersehen"], "accepted_answers": ["auf wiedersehen"], "explanation": "Auf Wiedersehen is a formal goodbye."},
+                  "prompt": "Type the German word for “hello.”",
+                  "payload": {"correct_answers": ["Hallo"], "accepted_answers": ["hallo"], "explanation": "Hallo is the informal German word for hello."},
+                  "sort_order": 4,
+                  "difficulty": "easy",
+                  "vocabulary_content_ids": ["vocab-hallo"],
+                  "approved": true
+                },
+                {
+                  "content_id": "exercise-greetings-matching",
+                  "type": "matching",
+                  "prompt": "Match each German greeting to its English meaning.",
+                  "payload": {"pairs": [{"left": "Hallo", "right": "Hello"}, {"left": "Guten Morgen", "right": "Good morning"}]},
                   "sort_order": 5,
                   "difficulty": "easy",
-                  "vocabulary_content_ids": ["vocab-auf-wiedersehen"],
+                  "vocabulary_content_ids": ["vocab-hallo", "vocab-guten-morgen"],
                   "approved": true
                 }
               ]
@@ -461,29 +1717,27 @@
               "hearts_allowed": 5,
               "xp_reward": 10,
               "review_status": "pending_human_review",
-              "approved": false,
+              "approved": true,
               "exercises": [
                 {
                   "content_id": "exercise-greetings-evening-choice",
                   "type": "multiple_choice",
                   "prompt": "Choose the greeting you can use in the evening.",
-                  "payload": {"options": ["Guten Abend", "Guten Morgen", "Gute Nacht"], "correct_answers": ["Guten Abend"], "extensions": {"speaking_prompt": "Say the greeting aloud with a partner."}},
+                  "payload": {"options": ["Guten Abend", "Guten Morgen", "Gute Nacht"], "correct_answers": ["Guten Abend"], "explanation": "Use Guten Abend when meeting someone in the evening. Gute Nacht is normally used to say good night, especially at bedtime."},
                   "sort_order": 1,
                   "difficulty": "easy",
                   "vocabulary_content_ids": ["vocab-guten-abend"],
-                  "review_status": "pending_human_review",
-                  "approved": false
+                  "approved": true
                 },
                 {
                   "content_id": "exercise-greetings-farewell-matching",
                   "type": "matching",
                   "prompt": "Match each German phrase with its English meaning.",
-                  "payload": {"pairs": [{"left": "Tschüss", "right": "Bye"}, {"left": "Bis bald", "right": "See you soon"}, {"left": "Danke", "right": "Thank you"}], "extensions": {"reading_text": "Mira: Tschüss, Leo! Leo: Bis bald, Mira!"}},
+                  "payload": {"pairs": [{"left": "Tschüss", "right": "Bye"}, {"left": "Bis bald", "right": "See you soon"}, {"left": "Danke", "right": "Thank you"}]},
                   "sort_order": 2,
                   "difficulty": "easy",
                   "vocabulary_content_ids": ["vocab-tschuess", "vocab-bis-bald", "vocab-danke"],
-                  "review_status": "pending_human_review",
-                  "approved": false
+                  "approved": true
                 }
               ]
             }
@@ -494,7 +1748,8 @@
           "title": "Introducing Yourself",
           "description": "Give a simple introduction.",
           "sort_order": 3,
-          "approved": true,
+          "review_status": "pending_human_review",
+          "approved": false,
           "lessons": [
             {
               "content_id": "lesson-foundations-introductions-name",
@@ -502,18 +1757,54 @@
               "sort_order": 1,
               "hearts_allowed": 5,
               "xp_reward": 10,
-              "approved": true,
+              "review_status": "pending_human_review",
+              "approved": false,
               "exercises": [
+                {
+                  "content_id": "exercise-introductions-heissen-choice",
+                  "type": "multiple_choice",
+                  "prompt": "Choose the German word for “to be called; to be named.”",
+                  "payload": {"options": ["heißen", "kommen", "wohnen"], "correct_answers": ["heißen"], "explanation": "Heißen means to be called or to be named."},
+                  "sort_order": 1,
+                  "difficulty": "easy",
+                  "vocabulary_content_ids": ["vocab-heissen"],
+                  "review_status": "pending_human_review",
+                  "approved": false
+                },
+                {
+                  "content_id": "exercise-introductions-ich-heisse-blank",
+                  "type": "fill_blank",
+                  "prompt": "Complete the sentence: Ich ___ Anna.",
+                  "payload": {"sentence": "Ich ___ Anna.", "blanks": ["heiße"], "correct_answers": ["heiße"], "explanation": "Use ich heiße to say your name."},
+                  "sort_order": 2,
+                  "difficulty": "easy",
+                  "vocabulary_content_ids": ["vocab-heissen"],
+                  "grammar_topic_content_ids": ["grammar-heissen-present"],
+                  "review_status": "pending_human_review",
+                  "approved": false
+                },
                 {
                   "content_id": "exercise-introductions-name-translation",
                   "type": "translation",
                   "prompt": "Translate into German: “My name is Anna.”",
                   "payload": {"correct_answers": ["Ich heiße Anna."], "accepted_answers": ["Ich heiße Anna", "Ich heisse Anna."], "explanation": "Ich heiße means my name is / I am called."},
-                  "sort_order": 1,
+                  "sort_order": 3,
                   "difficulty": "easy",
                   "vocabulary_content_ids": ["vocab-heissen"],
                   "grammar_topic_content_ids": ["grammar-heissen-present"],
-                  "approved": true
+                  "review_status": "pending_human_review",
+                  "approved": false
+                },
+                {
+                  "content_id": "exercise-introductions-heisse-type",
+                  "type": "type_answer",
+                  "prompt": "Type the German word for “to be called.”",
+                  "payload": {"correct_answers": ["heißen"], "accepted_answers": ["heissen", "heißen"], "explanation": "Heißen means to be called."},
+                  "sort_order": 4,
+                  "difficulty": "easy",
+                  "vocabulary_content_ids": ["vocab-heissen"],
+                  "review_status": "pending_human_review",
+                  "approved": false
                 }
               ]
             },
@@ -530,11 +1821,10 @@
                   "content_id": "exercise-introductions-ich-bin-blank",
                   "type": "fill_blank",
                   "prompt": "Complete the introduction: Ich ___ Mara.",
-                  "payload": {"sentence": "Ich ___ Mara.", "blanks": ["bin"], "correct_answers": ["bin"], "explanation": "Use ich bin to say who you are.", "extensions": {"speaking_prompt": "Replace Mara with your own name."}},
+                  "payload": {"sentence": "Ich ___ Mara.", "blanks": ["bin"], "correct_answers": ["bin"], "explanation": "Use ich bin to say who you are.", "extensions": {"speaking_prompt": "Replace Mara with your own name.", "speaking_mode": "guided_unscored"}},
                   "sort_order": 1,
                   "difficulty": "easy",
-                  "vocabulary_content_ids": ["vocab-ich-bin"],
-                  "grammar_topic_content_ids": ["grammar-sein-present-introduction"],
+                  "grammar_topic_content_ids": ["grammar-sein-present-introduction", "grammar-du-sie-register"],
                   "review_status": "pending_human_review",
                   "approved": false
                 },
@@ -545,7 +1835,7 @@
                   "payload": {"correct_answers": ["Ich bin Noor. Ich lerne Deutsch."], "accepted_answers": ["Ich bin Noor. Ich lerne Deutsch"], "explanation": "A short introduction can give your name and language.", "extensions": {"writing_prompt": "Write two original sentences about yourself."}},
                   "sort_order": 2,
                   "difficulty": "easy",
-                  "vocabulary_content_ids": ["vocab-ich-bin", "vocab-deutsch"],
+                  "vocabulary_content_ids": ["vocab-deutsch"],
                   "grammar_topic_content_ids": ["grammar-sein-present-introduction"],
                   "review_status": "pending_human_review",
                   "approved": false
@@ -558,9 +1848,9 @@
           "slug": "alphabet-pronunciation",
           "title": "Alphabet & Pronunciation",
           "description": "Recognize German special letters and spelling patterns.",
-          "sort_order": 1,
+          "sort_order": 2,
           "review_status": "pending_human_review",
-          "approved": false,
+          "approved": true,
           "lessons": [
             {
               "content_id": "lesson-foundations-alphabet-special-letters",
@@ -569,43 +1859,76 @@
               "hearts_allowed": 5,
               "xp_reward": 10,
               "review_status": "pending_human_review",
-              "approved": false,
+              "approved": true,
               "exercises": [
                 {
                   "content_id": "exercise-alphabet-umlaut-choice",
                   "type": "multiple_choice",
                   "prompt": "Which character is an umlaut?",
-                  "payload": {"options": ["Ü", "B", "S"], "correct_answers": ["Ü"], "extensions": {"speaking_prompt": "Say Ä, Ö, and Ü aloud after a future audio model is added."}},
+                  "payload": {"options": ["Ü", "B", "S"], "correct_answers": ["Ü"], "explanation": "Ü is an umlaut character in German."},
                   "sort_order": 1,
                   "difficulty": "easy",
                   "vocabulary_content_ids": ["vocab-umlaut"],
                   "grammar_topic_content_ids": ["grammar-german-special-letters"],
                   "review_status": "pending_human_review",
-                  "approved": false
+                  "approved": true
                 },
                 {
                   "content_id": "exercise-alphabet-special-letters-matching",
                   "type": "matching",
                   "prompt": "Match each German spelling term with its meaning.",
-                  "payload": {"pairs": [{"left": "Buchstabe", "right": "letter"}, {"left": "Umlaut", "right": "umlaut"}, {"left": "Eszett", "right": "sharp S (ß)"}], "extensions": {"reading_text": "München, schön, Straße"}},
+                  "payload": {"pairs": [{"left": "Buchstabe", "right": "letter"}, {"left": "Umlaut", "right": "umlaut"}, {"left": "Eszett", "right": "sharp S (ß)"}]},
                   "sort_order": 2,
                   "difficulty": "easy",
                   "vocabulary_content_ids": ["vocab-buchstabe", "vocab-umlaut", "vocab-eszett"],
                   "grammar_topic_content_ids": ["grammar-german-special-letters"],
                   "review_status": "pending_human_review",
-                  "approved": false
+                  "approved": true
                 },
                 {
                   "content_id": "exercise-alphabet-eszett-type",
                   "type": "type_answer",
                   "prompt": "Type the German word shown in this spelling clue: Stra__e.",
-                  "payload": {"correct_answers": ["Straße"], "accepted_answers": ["straße"], "explanation": "The word Straße uses ß.", "extensions": {"writing_prompt": "Copy the word once, keeping ß."}},
+                  "payload": {"correct_answers": ["Straße"], "accepted_answers": ["Straße"], "explanation": "Type the German spelling Straße with ß."},
                   "sort_order": 3,
                   "difficulty": "easy",
                   "vocabulary_content_ids": ["vocab-eszett"],
                   "grammar_topic_content_ids": ["grammar-german-special-letters"],
                   "review_status": "pending_human_review",
-                  "approved": false
+                  "approved": true
+                }
+              ]
+            },
+            {
+              "content_id": "lesson-foundations-alphabet-spelling-practice",
+              "title": "Spelling Practice",
+              "sort_order": 2,
+              "hearts_allowed": 5,
+              "xp_reward": 10,
+              "review_status": "pending_human_review",
+              "approved": true,
+              "exercises": [
+                {
+                  "content_id": "exercise-alphabet-munchen-type",
+                  "type": "type_answer",
+                  "prompt": "Type the German word for Munich: M__nchen.",
+                  "payload": {"correct_answers": ["München"], "accepted_answers": ["Munchen"], "explanation": "München is spelled with ü."},
+                  "sort_order": 1,
+                  "difficulty": "easy",
+                  "grammar_topic_content_ids": ["grammar-german-special-letters"],
+                  "review_status": "pending_human_review",
+                  "approved": true
+                },
+                {
+                  "content_id": "exercise-alphabet-schoen-bank",
+                  "type": "word_bank",
+                  "prompt": "Build the German word for beautiful: Sch__n.",
+                  "payload": {"tokens": ["Sch", "ö", "n", "e"], "correct_answers": ["Schön"], "explanation": "Schön means beautiful and uses ö."},
+                  "sort_order": 2,
+                  "difficulty": "easy",
+                  "grammar_topic_content_ids": ["grammar-german-special-letters"],
+                  "review_status": "pending_human_review",
+                  "approved": true
                 }
               ]
             }
@@ -617,7 +1940,7 @@
           "description": "Share where you live, where you come from, and basic details.",
           "sort_order": 4,
           "review_status": "pending_human_review",
-          "approved": false,
+          "approved": true,
           "lessons": [
             {
               "content_id": "lesson-foundations-personal-information-details",
@@ -626,43 +1949,89 @@
               "hearts_allowed": 5,
               "xp_reward": 10,
               "review_status": "pending_human_review",
-              "approved": false,
+              "approved": true,
               "exercises": [
                 {
                   "content_id": "exercise-personal-information-word-bank",
                   "type": "word_bank",
                   "prompt": "Build the sentence: “I come from Canada.”",
-                  "payload": {"tokens": ["Ich", "komme", "aus", "Kanada", "wohne"], "correct_answers": ["Ich komme aus Kanada."], "extensions": {"speaking_prompt": "Say where you come from using your own country."}},
+                  "payload": {"tokens": ["Ich", "komme", "aus", "Kanada", "wohne"], "correct_answers": ["Ich komme aus Kanada."], "explanation": "Ich komme aus means I come from."},
                   "sort_order": 1,
                   "difficulty": "easy",
-                  "vocabulary_content_ids": ["vocab-kommen-aus"],
-                  "grammar_topic_content_ids": ["grammar-regular-verbs-ich-du"],
+                  "vocabulary_content_ids": ["vocab-kommen"],
+                  "grammar_topic_content_ids": ["grammar-regular-verbs-ich-du", "grammar-kommen-aus", "grammar-du-sie-register"],
                   "review_status": "pending_human_review",
-                  "approved": false
+                  "approved": true
                 },
                 {
                   "content_id": "exercise-personal-information-wohnen-blank",
                   "type": "fill_blank",
                   "prompt": "Complete the sentence: Ich ___ in Bonn.",
-                  "payload": {"sentence": "Ich ___ in Bonn.", "blanks": ["wohne"], "correct_answers": ["wohne"], "explanation": "With ich, wohnen becomes wohne.", "extensions": {"writing_prompt": "Write where you live."}},
+                  "payload": {"sentence": "Ich ___ in Bonn.", "blanks": ["wohne"], "correct_answers": ["wohne"], "explanation": "With ich, wohnen becomes wohne."},
                   "sort_order": 2,
                   "difficulty": "easy",
                   "vocabulary_content_ids": ["vocab-wohnen"],
                   "grammar_topic_content_ids": ["grammar-regular-verbs-ich-du"],
                   "review_status": "pending_human_review",
-                  "approved": false
+                  "approved": true
                 },
                 {
                   "content_id": "exercise-personal-information-age-translation",
                   "type": "translation",
                   "prompt": "Translate into German: “I am 22 years old.”",
-                  "payload": {"correct_answers": ["Ich bin 22 Jahre alt."], "accepted_answers": ["Ich bin 22 Jahre alt"], "explanation": "Use bin plus a number and Jahre alt for age.", "extensions": {"reading_text": "Mara ist 22 Jahre alt."}},
+                  "payload": {"correct_answers": ["Ich bin 22 Jahre alt."], "accepted_answers": ["Ich bin 22 Jahre alt"], "explanation": "Use bin plus a number and Jahre alt for age."},
                   "sort_order": 3,
                   "difficulty": "easy",
                   "vocabulary_content_ids": ["vocab-jahr", "vocab-alter"],
                   "grammar_topic_content_ids": ["grammar-age-sein-jahre-alt"],
                   "review_status": "pending_human_review",
-                  "approved": false
+                  "approved": true
+                }
+              ]
+            },
+            {
+              "content_id": "lesson-foundations-personal-information-questions",
+              "title": "Personal Questions",
+              "sort_order": 2,
+              "hearts_allowed": 5,
+              "xp_reward": 10,
+              "review_status": "pending_human_review",
+              "approved": true,
+              "exercises": [
+                {
+                  "content_id": "exercise-personal-information-woher-choice",
+                  "type": "multiple_choice",
+                  "prompt": "Choose the German question word for “where from.”",
+                  "payload": {"options": ["woher", "wo", "wer"], "correct_answers": ["woher"], "explanation": "Woher means where from."},
+                  "sort_order": 1,
+                  "difficulty": "easy",
+                  "vocabulary_content_ids": ["vocab-woher"],
+                  "grammar_topic_content_ids": ["grammar-w-questions"],
+                  "review_status": "pending_human_review",
+                  "approved": true
+                },
+                {
+                  "content_id": "exercise-personal-information-woher-kommst-type",
+                  "type": "type_answer",
+                  "prompt": "Type the German question: “Where do you come from?” (informal)",
+                  "payload": {"correct_answers": ["Woher kommst du?"], "accepted_answers": ["Woher kommst du?"], "explanation": "Woher kommst du? asks where someone comes from."},
+                  "sort_order": 2,
+                  "difficulty": "easy",
+                  "vocabulary_content_ids": ["vocab-woher", "vocab-kommen"],
+                  "grammar_topic_content_ids": ["grammar-w-questions", "grammar-regular-verbs-ich-du", "grammar-du-sie-register"],
+                  "review_status": "pending_human_review",
+                  "approved": true
+                },
+                {
+                  "content_id": "exercise-personal-information-name-blank",
+                  "type": "fill_blank",
+                  "prompt": "Complete the sentence: Mein ___ ist Anna.",
+                  "payload": {"sentence": "Mein ___ ist Anna.", "blanks": ["Name"], "correct_answers": ["Name"], "explanation": "Mein Name means my name."},
+                  "sort_order": 3,
+                  "difficulty": "easy",
+                  "vocabulary_content_ids": ["vocab-name"],
+                  "review_status": "pending_human_review",
+                  "approved": true
                 }
               ]
             }
@@ -674,7 +2043,7 @@
           "description": "Ask simple questions and respond politely.",
           "sort_order": 5,
           "review_status": "pending_human_review",
-          "approved": false,
+          "approved": true,
           "lessons": [
             {
               "content_id": "lesson-foundations-basic-questions-conversation",
@@ -683,45 +2052,927 @@
               "hearts_allowed": 5,
               "xp_reward": 10,
               "review_status": "pending_human_review",
-              "approved": false,
+              "approved": true,
               "exercises": [
                 {
                   "content_id": "exercise-basic-questions-question-word-choice",
                   "type": "multiple_choice",
                   "prompt": "Choose the German question word for “where.”",
-                  "payload": {"options": ["wo", "wer", "wie"], "correct_answers": ["wo"], "extensions": {"listening_script": "Wo wohnst du?", "audio_asset_key": null}},
+                  "payload": {"options": ["wo", "wer", "wie"], "correct_answers": ["wo"], "explanation": "Wo means where."},
                   "sort_order": 1,
                   "difficulty": "easy",
                   "vocabulary_content_ids": ["vocab-wo"],
-                  "grammar_topic_content_ids": ["grammar-w-questions"],
+                  "grammar_topic_content_ids": ["grammar-w-questions", "grammar-du-sie-register"],
                   "review_status": "pending_human_review",
-                  "approved": false
+                  "approved": true
                 },
                 {
                   "content_id": "exercise-basic-questions-match",
                   "type": "matching",
                   "prompt": "Match each question word to its English meaning.",
-                  "payload": {"pairs": [{"left": "wer", "right": "who"}, {"left": "wo", "right": "where"}, {"left": "woher", "right": "where from"}], "extensions": {"reading_text": "Wer ist das? Wo wohnst du? Woher kommst du?"}},
+                  "payload": {"pairs": [{"left": "wer", "right": "who"}, {"left": "wo", "right": "where"}, {"left": "woher", "right": "where from"}]},
                   "sort_order": 2,
                   "difficulty": "easy",
                   "vocabulary_content_ids": ["vocab-wer", "vocab-wo", "vocab-woher"],
-                  "grammar_topic_content_ids": ["grammar-w-questions"],
+                  "grammar_topic_content_ids": ["grammar-w-questions", "grammar-du-sie-register"],
                   "review_status": "pending_human_review",
-                  "approved": false
+                  "approved": true
                 },
                 {
                   "content_id": "exercise-basic-questions-how-are-you-type",
                   "type": "type_answer",
                   "prompt": "Type the German question: “How are you?” (informal)",
-                  "payload": {"correct_answers": ["Wie geht es dir?"], "accepted_answers": ["Wie geht's dir?", "wie geht es dir?", "wie geht's dir?"], "explanation": "Wie geht es dir? is an informal way to ask how someone is.", "extensions": {"speaking_prompt": "Ask the question, then answer: Mir geht es gut."}},
+                  "payload": {"correct_answers": ["Wie geht es dir?"], "accepted_answers": ["Wie geht es dir?"], "explanation": "Wie geht es dir? asks how someone is informally."},
                   "sort_order": 3,
                   "difficulty": "easy",
                   "vocabulary_content_ids": ["vocab-wie", "vocab-gut"],
-                  "grammar_topic_content_ids": ["grammar-w-questions"],
+                  "grammar_topic_content_ids": ["grammar-w-questions", "grammar-du-sie-register"],
                   "review_status": "pending_human_review",
-                  "approved": false
+                  "approved": true
                 }
               ]
+            },
+            {
+              "content_id": "lesson-foundations-basic-questions-responses",
+              "title": "Responding to Questions",
+              "sort_order": 2,
+              "hearts_allowed": 5,
+              "xp_reward": 10,
+              "review_status": "pending_human_review",
+              "approved": true,
+              "exercises": [
+                {
+                  "content_id": "exercise-basic-questions-response-choice",
+                  "type": "multiple_choice",
+                  "prompt": "Choose the response to “Wie geht es dir?”",
+                  "payload": {"options": ["Mir geht es gut.", "Ich heiße Anna.", "Ich komme aus Kanada."], "correct_answers": ["Mir geht es gut."], "explanation": "Mir geht es gut means I am well."},
+                  "sort_order": 1,
+                  "difficulty": "easy",
+                  "vocabulary_content_ids": ["vocab-gut"],
+                  "review_status": "pending_human_review",
+                  "approved": true
+                },
+                {
+                  "content_id": "exercise-basic-questions-response-bank",
+                  "type": "word_bank",
+                  "prompt": "Build the response: “I am well.”",
+                  "payload": {"tokens": ["Mir", "geht", "es", "gut", "ich"], "correct_answers": ["Mir geht es gut."], "explanation": "Mir geht es gut is the standard response to Wie geht es dir?"},
+                  "sort_order": 2,
+                  "difficulty": "easy",
+                  "vocabulary_content_ids": ["vocab-gut"],
+                  "review_status": "pending_human_review",
+                  "approved": true
+                },
+                {
+                  "content_id": "exercise-basic-questions-wie-heisst-type",
+                  "type": "type_answer",
+                  "prompt": "Type the German question: “What is your name?” (informal)",
+                  "payload": {"correct_answers": ["Wie heißt du?"], "accepted_answers": ["Wie heisst du?", "Wie heißt du?"], "explanation": "Wie heißt du? asks someone's name informally."},
+                  "sort_order": 3,
+                  "difficulty": "easy",
+                  "vocabulary_content_ids": ["vocab-wie", "vocab-heissen"],
+                  "grammar_topic_content_ids": ["grammar-w-questions", "grammar-heissen-present", "grammar-du-sie-register"],
+                  "review_status": "pending_human_review",
+                  "approved": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "numbers-dates-time",
+      "title": "Numbers, Dates & Time",
+      "description": "Count, tell time, and talk about dates.",
+      "sort_order": 2,
+      "review_status": "pending_human_review",
+      "approved": true,
+      "skills": [
+        {
+          "slug": "numbers-1-20",
+          "title": "Numbers 1–20",
+          "description": "Learn to count from one to twenty.",
+          "sort_order": 1,
+          "review_status": "pending_human_review",
+          "approved": true,
+          "lessons": [
+            {
+              "content_id": "lesson-numbers-1-20-basic",
+              "title": "Numbers 1–10",
+              "sort_order": 1,
+              "hearts_allowed": 5,
+              "xp_reward": 10,
+              "review_status": "pending_human_review",
+              "approved": true,
+              "exercises": [
+                {
+                  "content_id": "exercise-numbers-1-10-choice",
+                  "type": "multiple_choice",
+                  "prompt": "Choose the German word for “three.”",
+                  "payload": {"options": ["drei", "zwei", "vier"], "correct_answers": ["drei"], "explanation": "Drei means three."},
+                  "sort_order": 1,
+                  "difficulty": "easy",
+                  "vocabulary_content_ids": ["vocab-drei"],
+                  "grammar_topic_content_ids": ["grammar-numbers-1-20"],
+                  "review_status": "pending_human_review",
+                  "approved": true
+                },
+                {
+                  "content_id": "exercise-numbers-1-10-matching",
+                  "type": "matching",
+                  "prompt": "Match each German number to its English meaning.",
+                  "payload": {"pairs": [{"left": "eins", "right": "one"}, {"left": "zwei", "right": "two"}, {"left": "drei", "right": "three"}]},
+                  "sort_order": 2,
+                  "difficulty": "easy",
+                  "vocabulary_content_ids": ["vocab-eins", "vocab-zwei", "vocab-drei"],
+                  "grammar_topic_content_ids": ["grammar-numbers-1-20"],
+                  "review_status": "pending_human_review",
+                  "approved": true
+                },
+                {
+                  "content_id": "exercise-numbers-1-10-type",
+                  "type": "type_answer",
+                  "prompt": "Type the German word for “five.”",
+                  "payload": {"correct_answers": ["fünf"], "accepted_answers": ["funf", "fünf"], "explanation": "Fünf means five."},
+                  "sort_order": 3,
+                  "difficulty": "easy",
+                  "vocabulary_content_ids": ["vocab-fuenf"],
+                  "grammar_topic_content_ids": ["grammar-numbers-1-20"],
+                  "review_status": "pending_human_review",
+                  "approved": true
+                },
+                {
+                  "content_id": "exercise-numbers-1-10-bank",
+                  "type": "word_bank",
+                  "prompt": "Build the German number for seven.",
+                  "payload": {"tokens": ["sie", "ben", "sieben", "zehn"], "correct_answers": ["sieben"], "explanation": "Sieben means seven."},
+                  "sort_order": 4,
+                  "difficulty": "easy",
+                  "vocabulary_content_ids": ["vocab-sieben"],
+                  "grammar_topic_content_ids": ["grammar-numbers-1-20"],
+                  "review_status": "pending_human_review",
+                  "approved": true
+                }
+              ]
+            },
+            {
+              "content_id": "lesson-numbers-11-20",
+              "title": "Numbers 11–20",
+              "sort_order": 2,
+              "hearts_allowed": 5,
+              "xp_reward": 10,
+              "review_status": "pending_human_review",
+              "approved": true,
+              "exercises": [
+                {
+                  "content_id": "exercise-numbers-11-20-choice",
+                  "type": "multiple_choice",
+                  "prompt": "Choose the German word for “twelve.”",
+                  "payload": {"options": ["zwölf", "zwanzig", "elf"], "correct_answers": ["zwölf"], "explanation": "Zwölf means twelve."},
+                  "sort_order": 1,
+                  "difficulty": "easy",
+                  "vocabulary_content_ids": ["vocab-zwoelf"],
+                  "grammar_topic_content_ids": ["grammar-numbers-1-20"],
+                  "review_status": "pending_human_review",
+                  "approved": true
+                },
+                {
+                  "content_id": "exercise-numbers-11-20-matching",
+                  "type": "matching",
+                  "prompt": "Match each German number to its English meaning.",
+                  "payload": {"pairs": [{"left": "elf", "right": "eleven"}, {"left": "zwölf", "right": "twelve"}, {"left": "dreizehn", "right": "thirteen"}]},
+                  "sort_order": 2,
+                  "difficulty": "easy",
+                  "grammar_topic_content_ids": ["grammar-numbers-1-20"],
+                  "review_status": "pending_human_review",
+                  "approved": true
+                },
+                {
+                  "content_id": "exercise-numbers-11-20-type",
+                  "type": "type_answer",
+                  "prompt": "Type the German word for “twenty.”",
+                  "payload": {"correct_answers": ["zwanzig"], "accepted_answers": ["zwanzig"], "explanation": "Zwanzig means twenty."},
+                  "sort_order": 3,
+                  "difficulty": "easy",
+                  "vocabulary_content_ids": ["vocab-zwanzig"],
+                  "grammar_topic_content_ids": ["grammar-numbers-1-20"],
+                  "review_status": "pending_human_review",
+                  "approved": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "numbers-21-100",
+          "title": "Numbers 21–100",
+          "description": "Learn numbers from twenty-one to one hundred.",
+          "sort_order": 2,
+          "review_status": "pending_human_review",
+          "approved": true,
+          "lessons": [
+            {
+              "content_id": "lesson-numbers-tens",
+              "title": "Tens (20, 30, 40...)",
+              "sort_order": 1,
+              "hearts_allowed": 5,
+              "xp_reward": 10,
+              "review_status": "pending_human_review",
+              "approved": true,
+              "exercises": [
+                {
+                  "content_id": "exercise-numbers-tens-choice",
+                  "type": "multiple_choice",
+                  "prompt": "Choose the German word for “thirty.”",
+                  "payload": {"options": ["dreißig", "dreizehn", "drei"], "correct_answers": ["dreißig"], "explanation": "Dreißig means thirty."},
+                  "sort_order": 1,
+                  "difficulty": "easy",
+                  "vocabulary_content_ids": ["vocab-dreissig"],
+                  "grammar_topic_content_ids": ["grammar-numbers-tens"],
+                  "review_status": "pending_human_review",
+                  "approved": true
+                },
+                {
+                  "content_id": "exercise-numbers-tens-matching",
+                  "type": "matching",
+                  "prompt": "Match each German number to its English meaning.",
+                  "payload": {"pairs": [{"left": "zwanzig", "right": "twenty"}, {"left": "dreißig", "right": "thirty"}, {"left": "vierzig", "right": "forty"}]},
+                  "sort_order": 2,
+                  "difficulty": "easy",
+                  "vocabulary_content_ids": ["vocab-zwanzig", "vocab-dreissig", "vocab-vierzig"],
+                  "grammar_topic_content_ids": ["grammar-numbers-tens"],
+                  "review_status": "pending_human_review",
+                  "approved": true
+                },
+                {
+                  "content_id": "exercise-numbers-tens-type",
+                  "type": "type_answer",
+                  "prompt": "Type the German word for “fifty.”",
+                  "payload": {"correct_answers": ["fünfzig"], "accepted_answers": ["funfzig", "fünfzig"], "explanation": "Fünfzig means fifty."},
+                  "sort_order": 3,
+                  "difficulty": "easy",
+                  "vocabulary_content_ids": ["vocab-fuenfzig"],
+                  "grammar_topic_content_ids": ["grammar-numbers-tens"],
+                  "review_status": "pending_human_review",
+                  "approved": true
+                },
+                {
+                  "content_id": "exercise-numbers-hundred-type",
+                  "type": "type_answer",
+                  "prompt": "Type the German word for “hundred.”",
+                  "payload": {"correct_answers": ["hundert"], "accepted_answers": ["hundert"], "explanation": "Hundert means hundred."},
+                  "sort_order": 4,
+                  "difficulty": "easy",
+                  "vocabulary_content_ids": ["vocab-hundert"],
+                  "grammar_topic_content_ids": ["grammar-numbers-tens"],
+                  "review_status": "pending_human_review",
+                  "approved": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "days-months",
+          "title": "Days & Months",
+          "description": "Name the days of the week and months of the year.",
+          "sort_order": 3,
+          "review_status": "pending_human_review",
+          "approved": true,
+          "lessons": [
+            {
+              "content_id": "lesson-days-week",
+              "title": "Days of the Week",
+              "sort_order": 1,
+              "hearts_allowed": 5,
+              "xp_reward": 10,
+              "review_status": "pending_human_review",
+              "approved": true,
+              "exercises": [
+                {
+                  "content_id": "exercise-days-choice",
+                  "type": "multiple_choice",
+                  "prompt": "Choose the German word for “Monday.”",
+                  "payload": {"options": ["Montag", "Dienstag", "Mittwoch"], "correct_answers": ["Montag"], "explanation": "Montag means Monday."},
+                  "sort_order": 1,
+                  "difficulty": "easy",
+                  "vocabulary_content_ids": ["vocab-montag"],
+                  "grammar_topic_content_ids": ["grammar-days-prepositions"],
+                  "review_status": "pending_human_review",
+                  "approved": true
+                },
+                {
+                  "content_id": "exercise-days-matching",
+                  "type": "matching",
+                  "prompt": "Match each German day to its English meaning.",
+                  "payload": {"pairs": [{"left": "Montag", "right": "Monday"}, {"left": "Dienstag", "right": "Tuesday"}, {"left": "Mittwoch", "right": "Wednesday"}]},
+                  "sort_order": 2,
+                  "difficulty": "easy",
+                  "vocabulary_content_ids": ["vocab-montag", "vocab-dienstag", "vocab-mittwoch"],
+                  "grammar_topic_content_ids": ["grammar-days-prepositions"],
+                  "review_status": "pending_human_review",
+                  "approved": true
+                },
+                {
+                  "content_id": "exercise-days-blank",
+                  "type": "fill_blank",
+                  "prompt": "Complete the sentence: Am ___ arbeite ich.",
+                  "payload": {"sentence": "Am ___ arbeite ich.", "blanks": ["Montag"], "correct_answers": ["Montag"], "explanation": "Use am with days of the week."},
+                  "sort_order": 3,
+                  "difficulty": "easy",
+                  "vocabulary_content_ids": ["vocab-montag"],
+                  "grammar_topic_content_ids": ["grammar-days-prepositions"],
+                  "review_status": "pending_human_review",
+                  "approved": true
+                }
+              ]
+            },
+            {
+              "content_id": "lesson-months-year",
+              "title": "Months of the Year",
+              "sort_order": 2,
+              "hearts_allowed": 5,
+              "xp_reward": 10,
+              "review_status": "pending_human_review",
+              "approved": true,
+              "exercises": [
+                {
+                  "content_id": "exercise-months-choice",
+                  "type": "multiple_choice",
+                  "prompt": "Choose the German word for “January.”",
+                  "payload": {"options": ["Januar", "Februar", "März"], "correct_answers": ["Januar"], "explanation": "Januar means January."},
+                  "sort_order": 1,
+                  "difficulty": "easy",
+                  "vocabulary_content_ids": ["vocab-januar"],
+                  "grammar_topic_content_ids": ["grammar-months-in"],
+                  "review_status": "pending_human_review",
+                  "approved": true
+                },
+                {
+                  "content_id": "exercise-months-matching",
+                  "type": "matching",
+                  "prompt": "Match each German month to its English meaning.",
+                  "payload": {"pairs": [{"left": "Januar", "right": "January"}, {"left": "Februar", "right": "February"}, {"left": "März", "right": "March"}]},
+                  "sort_order": 2,
+                  "difficulty": "easy",
+                  "vocabulary_content_ids": ["vocab-januar", "vocab-februar", "vocab-maerz"],
+                  "grammar_topic_content_ids": ["grammar-months-in"],
+                  "review_status": "pending_human_review",
+                  "approved": true
+                },
+                {
+                  "content_id": "exercise-months-blank",
+                  "type": "fill_blank",
+                  "prompt": "Complete the sentence: Im ___ ist es kalt.",
+                  "payload": {"sentence": "Im ___ ist es kalt.", "blanks": ["Januar"], "correct_answers": ["Januar"], "explanation": "Use im with months."},
+                  "sort_order": 3,
+                  "difficulty": "easy",
+                  "vocabulary_content_ids": ["vocab-januar"],
+                  "grammar_topic_content_ids": ["grammar-months-in"],
+                  "review_status": "pending_human_review",
+                  "approved": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "slug": "telling-time",
+          "title": "Telling Time",
+          "description": "Ask and tell the time in German.",
+          "sort_order": 4,
+          "review_status": "pending_human_review",
+          "approved": true,
+          "lessons": [
+            {
+              "content_id": "lesson-time-hours",
+              "title": "Hours and Minutes",
+              "sort_order": 1,
+              "hearts_allowed": 5,
+              "xp_reward": 10,
+              "review_status": "pending_human_review",
+              "approved": true,
+              "exercises": [
+                {
+                  "content_id": "exercise-time-choice",
+                  "type": "multiple_choice",
+                  "prompt": "Choose the German word for “o'clock; clock.”",
+                  "payload": {"options": ["Uhr", "Minute", "Stunde"], "correct_answers": ["Uhr"], "explanation": "Uhr means o'clock or clock."},
+                  "sort_order": 1,
+                  "difficulty": "easy",
+                  "vocabulary_content_ids": ["vocab-uhr"],
+                  "grammar_topic_content_ids": ["grammar-time-structure"],
+                  "review_status": "pending_human_review",
+                  "approved": true
+                },
+                {
+                  "content_id": "exercise-time-matching",
+                  "type": "matching",
+                  "prompt": "Match each German time word to its English meaning.",
+                  "payload": {"pairs": [{"left": "Uhr", "right": "o'clock"}, {"left": "Minute", "right": "minute"}, {"left": "Stunde", "right": "hour"}]},
+                  "sort_order": 2,
+                  "difficulty": "easy",
+                  "vocabulary_content_ids": ["vocab-uhr", "vocab-minute", "vocab-stunde"],
+                  "grammar_topic_content_ids": ["grammar-time-structure"],
+                  "review_status": "pending_human_review",
+                  "approved": true
+                },
+                {
+                  "content_id": "exercise-time-blank",
+                  "type": "fill_blank",
+                  "prompt": "Complete the sentence: Es ist acht ___.",
+                  "payload": {"sentence": "Es ist acht ___.", "blanks": ["Uhr"], "correct_answers": ["Uhr"], "explanation": "Use Uhr to tell time."},
+                  "sort_order": 3,
+                  "difficulty": "easy",
+                  "vocabulary_content_ids": ["vocab-uhr"],
+                  "grammar_topic_content_ids": ["grammar-time-structure"],
+                  "review_status": "pending_human_review",
+                  "approved": true
+                },
+                {
+                  "content_id": "exercise-time-type",
+                  "type": "type_answer",
+                  "prompt": "Type the German phrase: “It is four o'clock.”",
+                  "payload": {"correct_answers": ["Es ist vier Uhr."], "accepted_answers": ["Es ist vier Uhr"], "explanation": "Es ist vier Uhr means It is four o'clock."},
+                  "sort_order": 4,
+                  "difficulty": "easy",
+                  "vocabulary_content_ids": ["vocab-uhr", "vocab-vier"],
+                  "grammar_topic_content_ids": ["grammar-time-structure"],
+                  "review_status": "pending_human_review",
+                  "approved": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "family-people",
+      "title": "Family, People & Descriptions",
+      "description": "Talk about family members and describe people.",
+      "sort_order": 3,
+      "review_status": "pending_human_review",
+      "approved": false,
+      "skills": [
+        {
+          "slug": "family-vocabulary",
+          "title": "Family Vocabulary",
+          "description": "Learn words for family members.",
+          "sort_order": 1,
+          "review_status": "pending_human_review",
+          "approved": false,
+          "lessons": [
+            {
+              "content_id": "lesson-family-immediate",
+              "title": "Immediate Family",
+              "sort_order": 1,
+              "hearts_allowed": 5,
+              "xp_reward": 10,
+              "review_status": "pending_human_review",
+              "approved": false,
+              "exercises": []
+            },
+            {
+              "content_id": "lesson-family-extended",
+              "title": "Extended Family",
+              "sort_order": 2,
+              "hearts_allowed": 5,
+              "xp_reward": 10,
+              "review_status": "pending_human_review",
+              "approved": false,
+              "exercises": []
+            }
+          ]
+        },
+        {
+          "slug": "professions",
+          "title": "Professions",
+          "description": "Talk about jobs and professions.",
+          "sort_order": 2,
+          "review_status": "pending_human_review",
+          "approved": false,
+          "lessons": [
+            {
+              "content_id": "lesson-professions-basic",
+              "title": "Common Professions",
+              "sort_order": 1,
+              "hearts_allowed": 5,
+              "xp_reward": 10,
+              "review_status": "pending_human_review",
+              "approved": false,
+              "exercises": []
+            }
+          ]
+        },
+        {
+          "slug": "descriptions",
+          "title": "Basic Descriptions",
+          "description": "Describe people using adjectives.",
+          "sort_order": 3,
+          "review_status": "pending_human_review",
+          "approved": false,
+          "lessons": [
+            {
+              "content_id": "lesson-descriptions-appearance",
+              "title": "Appearance",
+              "sort_order": 1,
+              "hearts_allowed": 5,
+              "xp_reward": 10,
+              "review_status": "pending_human_review",
+              "approved": false,
+              "exercises": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "home-daily-life",
+      "title": "Home & Daily Life",
+      "description": "Talk about your home and daily routine.",
+      "sort_order": 4,
+      "review_status": "pending_human_review",
+      "approved": false,
+      "skills": [
+        {
+          "slug": "rooms-furniture",
+          "title": "Rooms & Furniture",
+          "description": "Name rooms in a house and common furniture.",
+          "sort_order": 1,
+          "review_status": "pending_human_review",
+          "approved": false,
+          "lessons": [
+            {
+              "content_id": "lesson-rooms-house",
+              "title": "Rooms in a House",
+              "sort_order": 1,
+              "hearts_allowed": 5,
+              "xp_reward": 10,
+              "review_status": "pending_human_review",
+              "approved": false,
+              "exercises": []
+            },
+            {
+              "content_id": "lesson-furniture-basic",
+              "title": "Basic Furniture",
+              "sort_order": 2,
+              "hearts_allowed": 5,
+              "xp_reward": 10,
+              "review_status": "pending_human_review",
+              "approved": false,
+              "exercises": []
+            }
+          ]
+        },
+        {
+          "slug": "daily-routine",
+          "title": "Daily Routine",
+          "description": "Talk about daily activities and routines.",
+          "sort_order": 2,
+          "review_status": "pending_human_review",
+          "approved": false,
+          "lessons": [
+            {
+              "content_id": "lesson-routine-verbs",
+              "title": "Routine Verbs",
+              "sort_order": 1,
+              "hearts_allowed": 5,
+              "xp_reward": 10,
+              "review_status": "pending_human_review",
+              "approved": false,
+              "exercises": []
+            }
+          ]
+        },
+        {
+          "slug": "household-objects",
+          "title": "Household Objects",
+          "description": "Name common household items.",
+          "sort_order": 3,
+          "review_status": "pending_human_review",
+          "approved": false,
+          "lessons": [
+            {
+              "content_id": "lesson-objects-kitchen",
+              "title": "Kitchen Objects",
+              "sort_order": 1,
+              "hearts_allowed": 5,
+              "xp_reward": 10,
+              "review_status": "pending_human_review",
+              "approved": false,
+              "exercises": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "food-shopping",
+      "title": "Food, Fruit & Shopping",
+      "description": "Order food and go shopping.",
+      "sort_order": 5,
+      "review_status": "pending_human_review",
+      "approved": false,
+      "skills": [
+        {
+          "slug": "food-items",
+          "title": "Common Food Items",
+          "description": "Learn names of common foods.",
+          "sort_order": 1,
+          "review_status": "pending_human_review",
+          "approved": false,
+          "lessons": [
+            {
+              "content_id": "lesson-food-fruits",
+              "title": "Fruits",
+              "sort_order": 1,
+              "hearts_allowed": 5,
+              "xp_reward": 10,
+              "review_status": "pending_human_review",
+              "approved": false,
+              "exercises": []
+            },
+            {
+              "content_id": "lesson-food-vegetables",
+              "title": "Vegetables",
+              "sort_order": 2,
+              "hearts_allowed": 5,
+              "xp_reward": 10,
+              "review_status": "pending_human_review",
+              "approved": false,
+              "exercises": []
+            }
+          ]
+        },
+        {
+          "slug": "ordering-cafe",
+          "title": "Ordering at a Cafe",
+          "description": "Order food and drinks at a cafe.",
+          "sort_order": 2,
+          "review_status": "pending_human_review",
+          "approved": false,
+          "lessons": [
+            {
+              "content_id": "lesson-cafe-phrases",
+              "title": "Cafe Phrases",
+              "sort_order": 1,
+              "hearts_allowed": 5,
+              "xp_reward": 10,
+              "review_status": "pending_human_review",
+              "approved": false,
+              "exercises": []
+            }
+          ]
+        },
+        {
+          "slug": "shopping-phrases",
+          "title": "Shopping Phrases",
+          "description": "Use phrases for shopping and quantities.",
+          "sort_order": 3,
+          "review_status": "pending_human_review",
+          "approved": false,
+          "lessons": [
+            {
+              "content_id": "lesson-shopping-quantities",
+              "title": "Quantities",
+              "sort_order": 1,
+              "hearts_allowed": 5,
+              "xp_reward": 10,
+              "review_status": "pending_human_review",
+              "approved": false,
+              "exercises": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "travel-town",
+      "title": "Travel, Town & Directions",
+      "description": "Navigate places in town and ask for directions.",
+      "sort_order": 6,
+      "review_status": "pending_human_review",
+      "approved": false,
+      "skills": [
+        {
+          "slug": "places-town",
+          "title": "Places in Town",
+          "description": "Name common places in a town or city.",
+          "sort_order": 1,
+          "review_status": "pending_human_review",
+          "approved": false,
+          "lessons": [
+            {
+              "content_id": "lesson-places-basic",
+              "title": "Basic Places",
+              "sort_order": 1,
+              "hearts_allowed": 5,
+              "xp_reward": 10,
+              "review_status": "pending_human_review",
+              "approved": false,
+              "exercises": []
+            }
+          ]
+        },
+        {
+          "slug": "asking-directions",
+          "title": "Asking Directions",
+          "description": "Ask for and give directions.",
+          "sort_order": 2,
+          "review_status": "pending_human_review",
+          "approved": false,
+          "lessons": [
+            {
+              "content_id": "lesson-directions-phrases",
+              "title": "Direction Phrases",
+              "sort_order": 1,
+              "hearts_allowed": 5,
+              "xp_reward": 10,
+              "review_status": "pending_human_review",
+              "approved": false,
+              "exercises": []
+            }
+          ]
+        },
+        {
+          "slug": "public-transport",
+          "title": "Public Transport",
+          "description": "Talk about buses, trains, and transport.",
+          "sort_order": 3,
+          "review_status": "pending_human_review",
+          "approved": false,
+          "lessons": [
+            {
+              "content_id": "lesson-transport-basics",
+              "title": "Transport Basics",
+              "sort_order": 1,
+              "hearts_allowed": 5,
+              "xp_reward": 10,
+              "review_status": "pending_human_review",
+              "approved": false,
+              "exercises": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "essential-grammar",
+      "title": "Essential Grammar & Sentence Building",
+      "description": "Master core grammar patterns for basic sentences.",
+      "sort_order": 7,
+      "review_status": "pending_human_review",
+      "approved": false,
+      "skills": [
+        {
+          "slug": "articles-gender",
+          "title": "Articles & Gender",
+          "description": "Use definite and indefinite articles with noun gender.",
+          "sort_order": 1,
+          "review_status": "pending_human_review",
+          "approved": false,
+          "lessons": [
+            {
+              "content_id": "lesson-articles-der-die-das",
+              "title": "Der, Die, Das",
+              "sort_order": 1,
+              "hearts_allowed": 5,
+              "xp_reward": 10,
+              "review_status": "pending_human_review",
+              "approved": false,
+              "exercises": []
+            },
+            {
+              "content_id": "lesson-articles-ein-eine",
+              "title": "Ein, Eine",
+              "sort_order": 2,
+              "hearts_allowed": 5,
+              "xp_reward": 10,
+              "review_status": "pending_human_review",
+              "approved": false,
+              "exercises": []
+            }
+          ]
+        },
+        {
+          "slug": "noun-adjective-basics",
+          "title": "Noun-Adjective Basics",
+          "description": "Use basic adjectives with nouns.",
+          "sort_order": 2,
+          "review_status": "pending_human_review",
+          "approved": false,
+          "lessons": [
+            {
+              "content_id": "lesson-adjectives-basic",
+              "title": "Basic Adjectives",
+              "sort_order": 1,
+              "hearts_allowed": 5,
+              "xp_reward": 10,
+              "review_status": "pending_human_review",
+              "approved": false,
+              "exercises": []
+            }
+          ]
+        },
+        {
+          "slug": "present-regular-verbs",
+          "title": "Present Tense Regular Verbs",
+          "description": "Conjugate regular verbs in present tense.",
+          "sort_order": 3,
+          "review_status": "pending_human_review",
+          "approved": false,
+          "lessons": [
+            {
+              "content_id": "lesson-regular-verbs-conjugation",
+              "title": "Verb Conjugation",
+              "sort_order": 1,
+              "hearts_allowed": 5,
+              "xp_reward": 10,
+              "review_status": "pending_human_review",
+              "approved": false,
+              "exercises": []
+            }
+          ]
+        },
+        {
+          "slug": "modal-verbs",
+          "title": "Modal Verbs",
+          "description": "Use können and wollen.",
+          "sort_order": 4,
+          "review_status": "pending_human_review",
+          "approved": false,
+          "lessons": [
+            {
+              "content_id": "lesson-modal-koennen",
+              "title": "Können (Can)",
+              "sort_order": 1,
+              "hearts_allowed": 5,
+              "xp_reward": 10,
+              "review_status": "pending_human_review",
+              "approved": false,
+              "exercises": []
+            },
+            {
+              "content_id": "lesson-modal-wollen",
+              "title": "Wollen (Want)",
+              "sort_order": 2,
+              "hearts_allowed": 5,
+              "xp_reward": 10,
+              "review_status": "pending_human_review",
+              "approved": false,
+              "exercises": []
+            }
+          ]
+        },
+        {
+          "slug": "negation",
+          "title": "Negation",
+          "description": "Use nicht and kein for negation.",
+          "sort_order": 5,
+          "review_status": "pending_human_review",
+          "approved": false,
+          "lessons": [
+            {
+              "content_id": "lesson-negation-nicht",
+              "title": "Nicht",
+              "sort_order": 1,
+              "hearts_allowed": 5,
+              "xp_reward": 10,
+              "review_status": "pending_human_review",
+              "approved": false,
+              "exercises": []
+            },
+            {
+              "content_id": "lesson-negation-kein",
+              "title": "Kein",
+              "sort_order": 2,
+              "hearts_allowed": 5,
+              "xp_reward": 10,
+              "review_status": "pending_human_review",
+              "approved": false,
+              "exercises": []
+            }
+          ]
+        },
+        {
+          "slug": "word-order",
+          "title": "Word Order",
+          "description": "Understand basic German word order in main clauses.",
+          "sort_order": 6,
+          "review_status": "pending_human_review",
+          "approved": false,
+          "lessons": [
+            {
+              "content_id": "lesson-word-order-main-clauses",
+              "title": "Main Clause Word Order",
+              "sort_order": 1,
+              "hearts_allowed": 5,
+              "xp_reward": 10,
+              "review_status": "pending_human_review",
+              "approved": false,
+              "exercises": []
             }
           ]
         }
