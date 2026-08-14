@@ -20,8 +20,8 @@ export default function Header({ userName }: { userName?: string | null }) {
     } catch (error) {
       console.error('Logout failed:', error);
     } finally {
-      // Always redirect to login regardless of API success/failure
-      router.push('/login');
+      // Always redirect to welcome page regardless of API success/failure
+      router.push('/');
     }
   };
 
