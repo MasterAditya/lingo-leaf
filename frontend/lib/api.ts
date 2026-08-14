@@ -23,24 +23,26 @@ async function fetchApi<T>(
   });
 
   if (!response.ok) {
+    const error = await response.json().catch(() => null);
+    const errorCode = error?.error?.code;
+    const errorMessage = error?.error?.message;
+    
     if (response.status === 401) {
-      throw new ApiError('UNAUTHORIZED', 'Authentication required');
+      throw new ApiError(errorCode || 'UNAUTHORIZED', errorMessage || 'Authentication required');
     }
     if (response.status === 403) {
-      throw new ApiError('FORBIDDEN', 'Access denied');
+      throw new ApiError(errorCode || 'FORBIDDEN', errorMessage || 'Access denied');
     }
     if (response.status === 404) {
-      throw new ApiError('NOT_FOUND', 'Resource not found');
+      throw new ApiError(errorCode || 'NOT_FOUND', errorMessage || 'Resource not found');
     }
     if (response.status === 409) {
-      const error = await response.json();
-      throw new ApiError(error.error?.code || 'CONFLICT', error.error?.message || 'Conflict');
+      throw new ApiError(errorCode || 'CONFLICT', errorMessage || 'Conflict');
     }
     if (response.status === 422) {
-      const error = await response.json();
-      throw new ApiError(error.error?.code || 'VALIDATION_ERROR', error.error?.message || 'Validation failed');
+      throw new ApiError(errorCode || 'VALIDATION_ERROR', errorMessage || 'Validation failed');
     }
-    throw new ApiError('UNKNOWN', `HTTP ${response.status}: ${response.statusText}`);
+    throw new ApiError(errorCode || 'UNKNOWN', errorMessage || `HTTP ${response.status}: ${response.statusText}`);
   }
 
   if (response.status === 204) {

@@ -8,12 +8,16 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
 from .api import router
-from .database import create_schema
+from .database import create_schema, create_database_engine
+from .seed import seed_database
 
 
 @asynccontextmanager
 async def lifespan(_: FastAPI):
     create_schema()
+    # Seed the database with approved German A1 content
+    engine = create_database_engine()
+    seed_database(engine)
     yield
 
 
