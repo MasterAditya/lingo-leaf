@@ -20,6 +20,8 @@ from .security import hash_password, verify_password
 router = APIRouter(prefix="/api")
 # Default to secure cookies for production HTTPS, but allow override for local HTTP development
 COOKIE_SECURE = os.environ.get("SESSION_COOKIE_SECURE", "true").lower() == "true"
+# Default to 'none' for cross-site production, 'lax' for local development
+COOKIE_SAMESITE = os.environ.get("SESSION_COOKIE_SAMESITE", "none").lower()
 
 
 class RegisterRequest(BaseModel):
@@ -141,7 +143,7 @@ def register(body: RegisterRequest, response: Response, db: Session = Depends(ge
         SESSION_COOKIE_NAME,
         session_record.session_token,
         httponly=True,
-        samesite="lax",
+        samesite=COOKIE_SAMESITE,
         secure=COOKIE_SECURE,
         max_age=int(SESSION_LIFETIME.total_seconds()),
         path="/",
@@ -160,7 +162,7 @@ def login(body: LoginRequest, response: Response, db: Session = Depends(get_sess
         SESSION_COOKIE_NAME,
         session_record.session_token,
         httponly=True,
-        samesite="lax",
+        samesite=COOKIE_SAMESITE,
         secure=COOKIE_SECURE,
         max_age=int(SESSION_LIFETIME.total_seconds()),
         path="/",
@@ -181,7 +183,7 @@ def logout(
         if record is not None:
             record.revoked = True
     db.commit()
-    response.delete_cookie(SESSION_COOKIE_NAME, samesite="lax", secure=COOKIE_SECURE, path="/")
+    response.delete_cookie(SESSION_COOKIE_NAME, samesite=COOKIE_SAMESITE, secure=COOKIE_SECURE, path="/")
     return response
 
 
