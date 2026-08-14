@@ -33,8 +33,8 @@ export default function Home() {
           <LingoLeafLogo size={96} />
         </div>
         
-        <h1 className="text-5xl font-bold text-gray-800 mb-4">LingoLeaf</h1>
-        <p className="text-xl text-gray-600 mb-2">German A1 Foundations</p>
+        <h1 className="text-5xl font-bold text-gray-800 mb-2">LingoLeaf</h1>
+        <p className="text-xl text-gray-600 mb-8">German A1 Foundations</p>
         <p className="text-xl text-gray-600 mb-8 max-w-lg mx-auto">
           Learn German through interactive lessons, exercises, and gamified progress tracking.
         </p>
