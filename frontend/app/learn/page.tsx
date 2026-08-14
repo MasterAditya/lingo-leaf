@@ -84,7 +84,7 @@ export default function LearnPage() {
     }, 60000); // Update every minute
 
     return () => clearInterval(interval);
-  }, [progress]);
+  }, [progress?.current_hearts, progress?.minutes_until_next_heart]);
 
   const toggleUnit = (unitId: number) => {
     setExpandedUnits((prev) => {
@@ -191,7 +191,7 @@ export default function LearnPage() {
                 <span className="text-3xl font-bold text-red-700">{progress?.current_hearts || 5}</span>
               </div>
               <p className="text-sm font-medium text-gray-600">Hearts</p>
-              {progress?.current_hearts < 5 && progress?.minutes_until_next_heart > 0 && (
+              {progress?.current_hearts !== undefined && progress.current_hearts < 5 && progress?.minutes_until_next_heart !== undefined && progress.minutes_until_next_heart > 0 && (
                 <p className="text-xs text-red-600 mt-1">+{progress.minutes_until_next_heart}m</p>
               )}
             </div>
