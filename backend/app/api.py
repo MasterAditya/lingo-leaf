@@ -401,6 +401,8 @@ def submit_attempt(
             raise _error(
                 status.HTTP_409_CONFLICT, "LESSON_ALREADY_COMPLETED", "This lesson is already complete."
             ) from None
+        if str(error) == "OUT_OF_HEARTS":
+            raise _error(status.HTTP_409_CONFLICT, "OUT_OF_HEARTS", "No hearts remaining. Try again later.") from None
         raise _error(status.HTTP_409_CONFLICT, "LESSON_OUT_OF_HEARTS", "No hearts remain for this lesson.") from None
     db.commit()
     payload = exercise.payload or {}
@@ -408,7 +410,6 @@ def submit_attempt(
         "result": "correct" if correct else "incorrect",
         "xp_awarded": xp_awarded,
         "correct_answers": payload.get("correct_answers", []),
-        "user_hearts_remaining": progress.hearts_remaining,
         "explanation": payload.get("explanation"),
         "progress": _progress_data(db, user),
     }
@@ -440,7 +441,6 @@ def finish_lesson(
             )
         ),
         "next_skill_unlocked": skill_completed,
-        "user_hearts_remaining": progress.hearts_remaining,
         "progress": _progress_data(db, user),
     }
 

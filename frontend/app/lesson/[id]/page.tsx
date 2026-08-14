@@ -65,6 +65,29 @@ export default function LessonPage({ params }: { params: Promise<{ id: string }>
     loadLesson();
   }, [lessonId, router]);
 
+  // Countdown timer for heart regeneration
+  useEffect(() => {
+    if (hearts >= 5 || minutesUntilNextHeart <= 0) return;
+
+    const interval = setInterval(() => {
+      setMinutesUntilNextHeart((prev) => {
+        if (prev <= 1) {
+          // Heart regenerated, refresh progress
+          getCurrentUser().then(userData => {
+            getProgress(userData.id).then(progressData => {
+              setHearts(progressData.current_hearts);
+              setMinutesUntilNextHeart(progressData.minutes_until_next_heart);
+            });
+          });
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 60000); // Update every minute
+
+    return () => clearInterval(interval);
+  }, [hearts, minutesUntilNextHeart]);
+
   const currentExercise = lesson?.exercises[currentIndex];
 
   const handleSubmit = async (answer: unknown) => {
@@ -107,7 +130,10 @@ export default function LessonPage({ params }: { params: Promise<{ id: string }>
       setTimeout(() => {
         setFeedback(null);
         if (result.progress.current_hearts === 0) {
-          router.push('/learn');
+          setError('No hearts remaining. Try again later!');
+          setTimeout(() => {
+            router.push('/learn');
+          }, 2000);
         } else if (currentIndex < (lesson?.exercises.length || 0) - 1) {
           setCurrentIndex((prev) => prev + 1);
         } else {
