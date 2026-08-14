@@ -59,6 +59,7 @@ class User(Base):
     skill_progress: Mapped[list[SkillProgress]] = relationship(back_populates="user")
     lesson_progress: Mapped[list[LessonProgress]] = relationship(back_populates="user")
     sessions: Mapped[list[SessionRecord]] = relationship(back_populates="user")
+    password_resets: Mapped[list["PasswordReset"]] = relationship(back_populates="user")
 
 
 class Unit(Base):
@@ -224,3 +225,16 @@ class SessionRecord(Base):
     revoked: Mapped[bool] = mapped_column(Boolean, nullable=False, default=False, server_default="0")
 
     user: Mapped[User] = relationship(back_populates="sessions")
+
+
+class PasswordReset(Base):
+    __tablename__ = "password_resets"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    user_id: Mapped[int] = mapped_column(ForeignKey("users.id"), nullable=False)
+    token: Mapped[str] = mapped_column(String(255), unique=True, nullable=False)
+    created_at: Mapped[datetime] = mapped_column(DateTime, nullable=False, server_default=func.current_timestamp())
+    expires_at: Mapped[datetime] = mapped_column(DateTime, nullable=False)
+    used: Mapped[bool] = mapped_column(Boolean, nullable=False, default=False, server_default="0")
+
+    user: Mapped[User] = relationship(back_populates="password_resets")

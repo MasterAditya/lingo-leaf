@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import Header from '@/components/Header';
-import { getProgress, getCurrentUser, ApiError } from '@/lib/api';
+import { getProgress, getCurrentUser, updateProfile, ApiError } from '@/lib/api';
 import type { Progress } from '@/types/api';
 
 interface Achievement {
@@ -20,12 +21,17 @@ export default function ProfilePage() {
   const [progress, setProgress] = useState<Progress | null>(null);
   const [userName, setUserName] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
+  const [isEditing, setIsEditing] = useState(false);
+  const [editName, setEditName] = useState('');
+  const [editError, setEditError] = useState('');
+  const [isSaving, setIsSaving] = useState(false);
 
   useEffect(() => {
     async function loadProgress() {
       try {
         const userData = await getCurrentUser();
         setUserName(userData.display_name);
+        setEditName(userData.display_name || '');
         const progressData = await getProgress(userData.id);
         setProgress(progressData);
       } catch (err) {
@@ -38,6 +44,43 @@ export default function ProfilePage() {
     }
     loadProgress();
   }, [router]);
+
+  const handleEdit = () => {
+    setIsEditing(true);
+    setEditName(userName || '');
+    setEditError('');
+  };
+
+  const handleCancel = () => {
+    setIsEditing(false);
+    setEditName(userName || '');
+    setEditError('');
+  };
+
+  const handleSave = async () => {
+    const trimmedName = editName.trim();
+    if (!trimmedName) {
+      setEditError('Display name is required');
+      return;
+    }
+
+    setEditError('');
+    setIsSaving(true);
+
+    try {
+      await updateProfile(trimmedName);
+      setUserName(trimmedName);
+      setIsEditing(false);
+    } catch (err) {
+      if (err instanceof ApiError) {
+        setEditError(err.message);
+      } else {
+        setEditError('Failed to update profile');
+      }
+    } finally {
+      setIsSaving(false);
+    }
+  };
 
   const achievements: Achievement[] = [
     {
@@ -103,6 +146,11 @@ export default function ProfilePage() {
 
   const completedLessons = progress?.lessons?.filter(l => l.completed).length || 0;
   const completedSkills = progress?.skills?.filter(s => s.mastered).length || 0;
+  const dailyXp = progress?.daily_xp || 0;
+  const dailyGoal = progress?.daily_goal_target || 10;
+  const xpProgress = Math.min(100, (dailyXp / dailyGoal) * 100);
+  const goalComplete = dailyXp >= dailyGoal;
+  const xpBeyondGoal = goalComplete ? dailyXp - dailyGoal : 0;
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-purple-50/30">
@@ -117,7 +165,54 @@ export default function ProfilePage() {
               </svg>
             </div>
             <div>
-              <h1 className="text-3xl font-bold text-gray-800">{userName || 'LingoLeaf Learner'}</h1>
+              <div className="flex items-center space-x-3">
+                {isEditing ? (
+                  <div className="flex-1">
+                    <input
+                      type="text"
+                      value={editName}
+                      onChange={(e) => setEditName(e.target.value)}
+                      onKeyPress={(e) => e.key === 'Enter' && handleSave()}
+                      className="text-3xl font-bold text-gray-800 border-b-2 border-emerald-500 focus:outline-none bg-transparent w-full"
+                      autoFocus
+                    />
+                    {editError && (
+                      <p className="text-red-600 text-sm mt-1">{editError}</p>
+                    )}
+                  </div>
+                ) : (
+                  <h1 className="text-3xl font-bold text-gray-800">{userName}</h1>
+                )}
+                {!isEditing && (
+                  <button
+                    onClick={handleEdit}
+                    className="p-2 text-gray-500 hover:text-emerald-600 transition"
+                    aria-label="Edit profile"
+                  >
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                    </svg>
+                  </button>
+                )}
+                {isEditing && (
+                  <div className="flex space-x-2">
+                    <button
+                      onClick={handleSave}
+                      disabled={isSaving}
+                      className="px-3 py-1 bg-emerald-500 text-white rounded-lg text-sm font-medium hover:bg-emerald-600 transition disabled:opacity-50"
+                    >
+                      {isSaving ? 'Saving...' : 'Save'}
+                    </button>
+                    <button
+                      onClick={handleCancel}
+                      disabled={isSaving}
+                      className="px-3 py-1 bg-gray-200 text-gray-700 rounded-lg text-sm font-medium hover:bg-gray-300 transition disabled:opacity-50"
+                    >
+                      Cancel
+                    </button>
+                  </div>
+                )}
+              </div>
               <p className="text-gray-500 mt-1">German A1 • Foundations</p>
               <div className="flex items-center space-x-2 mt-2">
                 <span className="px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-bold rounded-full">Active Learner</span>
@@ -146,6 +241,22 @@ export default function ProfilePage() {
           </div>
         </div>
 
+        {/* Account Actions */}
+        <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6 mb-6">
+          <h2 className="text-xl font-bold text-gray-800 mb-4">Account</h2>
+          <div className="space-y-3">
+            <Link
+              href="/forgot-password"
+              className="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition"
+            >
+              <span className="text-gray-700 font-medium">Change Password</span>
+              <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </div>
+        </div>
+
         {/* Learning Statistics */}
         <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6 mb-6">
           <h2 className="text-xl font-bold text-gray-800 mb-4">Learning Statistics</h2>
@@ -153,15 +264,24 @@ export default function ProfilePage() {
             <div className="flex justify-between items-center">
               <span className="text-gray-600 font-medium">Daily XP Goal Progress</span>
               <span className="font-bold text-emerald-600">
-                {progress?.daily_xp || 0} / {progress?.daily_goal_target || 50} XP
+                {goalComplete ? (
+                  <span>{dailyXp} XP • Goal complete</span>
+                ) : (
+                  <span>{dailyXp} / {dailyGoal} XP</span>
+                )}
               </span>
             </div>
             <div className="w-full h-4 bg-gray-100 rounded-full overflow-hidden shadow-inner">
               <div
                 className="h-full bg-gradient-to-r from-emerald-400 to-green-500 transition-all duration-500 rounded-full"
-                style={{ width: `${Math.min(100, ((progress?.daily_xp || 0) / (progress?.daily_goal_target || 50)) * 100)}%` }}
+                style={{ width: `${xpProgress}%` }}
               />
             </div>
+            {xpBeyondGoal > 0 && (
+              <p className="text-sm font-medium text-emerald-600">
+                +{xpBeyondGoal} XP beyond daily goal
+              </p>
+            )}
             
             <div className="flex justify-between items-center pt-2">
               <span className="text-gray-600 font-medium">Total Attempts</span>

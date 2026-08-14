@@ -86,6 +86,27 @@ export async function getCurrentUser() {
   return fetchApi<{ id: number; display_name: string | null }>('/api/auth/me');
 }
 
+export async function updateProfile(displayName: string) {
+  return fetchApi<{ id: number; display_name: string }>('/api/auth/me', {
+    method: 'PUT',
+    body: JSON.stringify({ display_name: displayName }),
+  });
+}
+
+export async function forgotPassword(email: string) {
+  return fetchApi<{ message: string }>('/api/auth/forgot-password', {
+    method: 'POST',
+    body: JSON.stringify({ email }),
+  });
+}
+
+export async function resetPassword(token: string, newPassword: string) {
+  return fetchApi<{ message: string }>('/api/auth/reset-password', {
+    method: 'POST',
+    body: JSON.stringify({ token, new_password: newPassword }),
+  });
+}
+
 // Course content
 export async function getUnits() {
   return fetchApi<{ units: import('../types/api').Unit[] }>('/api/units');

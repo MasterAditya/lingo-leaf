@@ -136,7 +136,7 @@ export default function LearnPage() {
               <div className="flex items-center justify-end space-x-2">
                 <span className="text-2xl font-bold text-emerald-600">{progress?.daily_xp || 0}</span>
                 <span className="text-gray-400">/</span>
-                <span className="text-lg text-gray-600">{progress?.daily_goal_target || 50} XP</span>
+                <span className="text-lg text-gray-600">{progress?.daily_goal_target || 10} XP</span>
               </div>
             </div>
           </div>
@@ -187,14 +187,33 @@ export default function LearnPage() {
           <div className="mt-6">
             <div className="flex justify-between text-sm mb-2">
               <span className="text-gray-600">Daily Progress</span>
-              <span className="font-medium text-emerald-600">{Math.round(((progress?.daily_xp || 0) / (progress?.daily_goal_target || 50)) * 100)}%</span>
+              <span className="font-medium text-emerald-600">
+                {(() => {
+                  const dailyXp = progress?.daily_xp || 0;
+                  const dailyGoal = progress?.daily_goal_target || 10;
+                  const goalComplete = dailyXp >= dailyGoal;
+                  if (goalComplete) {
+                    return `${dailyXp} XP • Goal complete`;
+                  }
+                  return `${Math.round((dailyXp / dailyGoal) * 100)}%`;
+                })()}
+              </span>
             </div>
             <div className="w-full h-4 bg-gray-100 rounded-full overflow-hidden shadow-inner">
               <div
                 className="h-full bg-gradient-to-r from-emerald-400 to-green-500 transition-all duration-500 ease-out rounded-full"
-                style={{ width: `${Math.min(100, ((progress?.daily_xp || 0) / (progress?.daily_goal_target || 50)) * 100)}%` }}
+                style={{ width: `${Math.min(100, ((progress?.daily_xp || 0) / (progress?.daily_goal_target || 10)) * 100)}%` }}
               />
             </div>
+            {(() => {
+              const dailyXp = progress?.daily_xp || 0;
+              const dailyGoal = progress?.daily_goal_target || 10;
+              const xpBeyondGoal = dailyXp > dailyGoal ? dailyXp - dailyGoal : 0;
+              if (xpBeyondGoal > 0) {
+                return <p className="text-xs font-medium text-emerald-600 mt-1">+{xpBeyondGoal} XP beyond daily goal</p>;
+              }
+              return null;
+            })()}
           </div>
         </div>
 

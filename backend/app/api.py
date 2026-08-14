@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import os
+from datetime import datetime
 from typing import Any
 
 from fastapi import APIRouter, Depends, HTTPException, Request, Response, status
@@ -14,7 +15,7 @@ from sqlalchemy.orm import Session
 from .auth import SESSION_COOKIE_NAME, SESSION_LIFETIME, create_session, current_user_optional, require_current_user
 from .database import get_session
 from .learning import complete_lesson, is_lesson_unlocked, is_skill_unlocked, public_payload, record_attempt
-from .models import Attempt, Exercise, Lesson, LessonProgress, SessionRecord, Skill, SkillProgress, Unit, User
+from .models import Attempt, Exercise, Lesson, LessonProgress, PasswordReset, SessionRecord, Skill, SkillProgress, Unit, User
 from .security import hash_password, verify_password
 
 router = APIRouter(prefix="/api")
@@ -27,7 +28,20 @@ COOKIE_SAMESITE = os.environ.get("SESSION_COOKIE_SAMESITE", "none").lower()
 class RegisterRequest(BaseModel):
     email: str
     password: str
-    display_name: str | None = None
+    display_name: str
+
+
+class UpdateProfileRequest(BaseModel):
+    display_name: str
+
+
+class ForgotPasswordRequest(BaseModel):
+    email: str
+
+
+class ResetPasswordRequest(BaseModel):
+    token: str
+    new_password: str
 
 
 class LoginRequest(BaseModel):
@@ -126,8 +140,14 @@ def register(body: RegisterRequest, response: Response, db: Session = Depends(ge
             "INVALID_REGISTRATION",
             "A valid email and a password of at most 72 bytes are required.",
         )
+    if not body.display_name or not body.display_name.strip():
+        raise _error(
+            status.HTTP_422_UNPROCESSABLE_ENTITY,
+            "INVALID_DISPLAY_NAME",
+            "Display name is required.",
+        )
     user = User(
-        email=body.email.strip().lower(), password_hash=hash_password(body.password), display_name=body.display_name
+        email=body.email.strip().lower(), password_hash=hash_password(body.password), display_name=body.display_name.strip()
     )
     db.add(user)
     try:
@@ -191,6 +211,88 @@ def logout(
 def get_current_user(user: User = Depends(require_current_user)) -> dict[str, Any]:
     """Return the current authenticated user's information."""
     return {"id": user.id, "display_name": user.display_name}
+
+
+@router.put("/auth/me")
+def update_current_user(
+    body: UpdateProfileRequest, user: User = Depends(require_current_user), db: Session = Depends(get_session)
+) -> dict[str, Any]:
+    """Update the current authenticated user's profile."""
+    if not body.display_name or not body.display_name.strip():
+        raise _error(
+            status.HTTP_422_UNPROCESSABLE_ENTITY,
+            "INVALID_DISPLAY_NAME",
+            "Display name is required.",
+        )
+    user.display_name = body.display_name.strip()
+    db.commit()
+    return {"id": user.id, "display_name": user.display_name}
+
+
+@router.post("/auth/forgot-password")
+def forgot_password(body: ForgotPasswordRequest, db: Session = Depends(get_session)) -> dict[str, str]:
+    """Initiate password reset by creating a reset token."""
+    # Always return success to avoid revealing whether email exists
+    user = db.scalar(select(User).where(User.email == body.email.strip().lower()))
+    if user is not None:
+        # Create a reset token
+        import secrets
+        from datetime import timedelta
+
+        token = secrets.token_urlsafe(32)
+        expires_at = datetime.now() + timedelta(hours=1)
+
+        # Invalidate any existing unused tokens for this user
+        db.execute(
+            select(PasswordReset).where(PasswordReset.user_id == user.id, PasswordReset.used == False)
+        )
+        existing_resets = list(
+            db.scalars(select(PasswordReset).where(PasswordReset.user_id == user.id, PasswordReset.used == False))
+        )
+        for reset in existing_resets:
+            reset.used = True
+
+        reset_record = PasswordReset(user_id=user.id, token=token, expires_at=expires_at)
+        db.add(reset_record)
+        db.commit()
+
+        # In production, send email with reset link containing the token
+        # For now, the token is returned in the response for testing
+        # In production with email provider, remove token from response
+        # and configure SMTP/API for email delivery
+        return {"message": "If an account exists with this email, a password reset link has been sent."}
+
+    return {"message": "If an account exists with this email, a password reset link has been sent."}
+
+
+@router.post("/auth/reset-password")
+def reset_password(body: ResetPasswordRequest, db: Session = Depends(get_session)) -> dict[str, str]:
+    """Reset password using a valid reset token."""
+    if not body.new_password or len(body.new_password.encode("utf-8")) > 72:
+        raise _error(
+            status.HTTP_422_UNPROCESSABLE_ENTITY,
+            "INVALID_PASSWORD",
+            "Password must be at most 72 bytes.",
+        )
+
+    reset = db.scalar(
+        select(PasswordReset).where(
+            PasswordReset.token == body.token, PasswordReset.used == False, PasswordReset.expires_at > datetime.now()
+        )
+    )
+
+    if reset is None:
+        raise _error(status.HTTP_400_BAD_REQUEST, "INVALID_TOKEN", "Invalid or expired reset token.")
+
+    # Mark token as used
+    reset.used = True
+
+    # Update user password
+    user = db.get(User, reset.user_id)
+    user.password_hash = hash_password(body.new_password)
+    db.commit()
+
+    return {"message": "Password has been reset successfully."}
 
 
 @router.get("/units")

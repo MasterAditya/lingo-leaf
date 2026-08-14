@@ -1,35 +1,48 @@
 'use client';
 
-import { useState } from 'react';
-import { useRouter } from 'next/navigation';
+import { useState, useEffect } from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
-import { register, ApiError } from '@/lib/api';
+import { resetPassword, ApiError } from '@/lib/api';
 import LingoLeafLogo from '@/components/LingoLeafLogo';
 
-export default function RegisterPage() {
+export default function ResetPasswordPage() {
   const router = useRouter();
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [displayName, setDisplayName] = useState('');
+  const searchParams = useSearchParams();
+  const [token, setToken] = useState('');
+  const [newPassword, setNewPassword] = useState('');
   const [error, setError] = useState('');
+  const [success, setSuccess] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
+
+  useEffect(() => {
+    const tokenParam = searchParams.get('token');
+    if (!tokenParam) {
+      setError('Invalid reset link. Please request a new password reset.');
+    } else {
+      setToken(tokenParam);
+    }
+  }, [searchParams]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
+    setSuccess(false);
     setIsLoading(true);
 
-    const trimmedName = displayName.trim();
-    if (!trimmedName) {
-      setError('Display name is required');
+    if (!token) {
+      setError('Invalid reset link. Please request a new password reset.');
       setIsLoading(false);
       return;
     }
 
     try {
-      await register(email, password, trimmedName);
-      router.push('/learn');
+      await resetPassword(token, newPassword);
+      setSuccess(true);
+      setTimeout(() => {
+        router.push('/login');
+      }, 2000);
     } catch (err) {
       if (err instanceof ApiError) {
         setError(err.message);
@@ -49,7 +62,7 @@ export default function RegisterPage() {
             <LingoLeafLogo size={80} />
           </div>
           <h1 className="text-3xl font-bold text-gray-800 mb-2">LingoLeaf</h1>
-          <p className="text-gray-600">Create your account to start learning German.</p>
+          <p className="text-gray-600">Enter your new password to continue.</p>
         </div>
 
         <div className="bg-white rounded-2xl shadow-xl p-8">
@@ -60,46 +73,22 @@ export default function RegisterPage() {
               </div>
             )}
 
-            <div>
-              <label htmlFor="displayName" className="block text-sm font-medium text-gray-700 mb-2">
-                Display Name *
-              </label>
-              <input
-                id="displayName"
-                type="text"
-                value={displayName}
-                onChange={(e) => setDisplayName(e.target.value)}
-                required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition"
-                placeholder="Your name"
-              />
-            </div>
+            {success && (
+              <div className="bg-emerald-50 border border-emerald-200 text-emerald-700 px-4 py-3 rounded-lg">
+                Password has been reset successfully. Redirecting to login...
+              </div>
+            )}
 
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                Email
-              </label>
-              <input
-                id="email"
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition"
-                placeholder="you@example.com"
-              />
-            </div>
-
-            <div>
-              <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
-                Password
+              <label htmlFor="newPassword" className="block text-sm font-medium text-gray-700 mb-2">
+                New Password
               </label>
               <div className="relative">
                 <input
-                  id="password"
+                  id="newPassword"
                   type={showPassword ? 'text' : 'password'}
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
+                  value={newPassword}
+                  onChange={(e) => setNewPassword(e.target.value)}
                   required
                   minLength={1}
                   maxLength={72}
@@ -129,15 +118,15 @@ export default function RegisterPage() {
 
             <button
               type="submit"
-              disabled={isLoading}
+              disabled={isLoading || success || !token}
               className="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-4 rounded-lg transition duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {isLoading ? 'Creating account...' : 'Sign Up'}
+              {isLoading ? 'Resetting...' : 'Reset Password'}
             </button>
           </form>
 
           <p className="mt-6 text-center text-gray-600">
-            Already have an account?{' '}
+            Remember your password?{' '}
             <Link href="/login" className="text-green-600 hover:text-green-700 font-medium">
               Log in
             </Link>
