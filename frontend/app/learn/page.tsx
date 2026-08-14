@@ -67,7 +67,7 @@ export default function LearnPage() {
 
   // Countdown timer for heart regeneration
   useEffect(() => {
-    if (!progress || progress.current_hearts >= 5 || progress.minutes_until_next_heart <= 0) return;
+    if (!progress || progress.current_hearts === undefined || progress.current_hearts >= 5 || progress.minutes_until_next_heart === undefined || progress.minutes_until_next_heart <= 0) return;
 
     const interval = setInterval(() => {
       // Refresh progress to get updated heart count
