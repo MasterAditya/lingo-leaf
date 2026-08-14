@@ -1,6 +1,5 @@
 // Centralized API client for FastAPI backend
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 
-  (process.env.NODE_ENV === 'production' ? 'https://lingo-leaf.onrender.com' : 'http://localhost:8000');
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://lingo-leaf.onrender.com';
 
 class ApiError extends Error {
   constructor(public code: string, message: string, public details?: unknown) {
